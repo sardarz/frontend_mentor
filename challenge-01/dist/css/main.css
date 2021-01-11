@@ -53,6 +53,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #fff;
+  animation: slideDown .8s ease-in-out;
 }
 
 .card__profile {
@@ -113,5 +114,14 @@ body {
 hr {
   width: 100%;
   opacity: 0.3;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=main.css.map */
