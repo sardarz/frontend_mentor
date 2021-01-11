@@ -1,6 +1,6 @@
-@import "reset";
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-//variables 
+//variables
 :root {
     --darkCyan: hsl(185, 75%, 39%);
     --desaturatedBlue: hsl(229, 23%, 23%);
@@ -8,9 +8,89 @@
     --darkGray: hsl(0, 0%, 59%);
 }
 
-// font 
+// mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 body {
     font-size: 1.8rem;
     font-family: 'Kumbh Sans', sans-serif;
+    @include flex-center();
+    min-height: 100vh;
+    color: var(--desaturatedBlue);
+    background: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    background-color: var(--darkCyan);
 }
 
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    &__profile {
+        @include flex-column-center();
+
+        &-img img {
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+        &-img {
+            transform: translateY(-50%);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            transform: translateY(-125%);
+        }
+
+        span {
+            color: var(--darkGray);
+            font-weight: 400;
+        }
+
+        p {
+            transform: translateY(-50%);
+            color: var(--darkGray);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 3rem 4rem;
+        &-info {
+            @include flex-column-center();
+        }
+    }
+
+    &__number {
+        font-weight: 700;
+    }
+
+    &__word {
+        font-size: 1.4rem;
+        color: var(--darkGray);
+        margin-top: 0.8rem;
+    }
+}
+
+hr {
+    width: 100%;
+    opacity: 0.3;
+}
