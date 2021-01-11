@@ -39,4 +39,8 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1.2rem;
 }
+
+.card__img-box {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
