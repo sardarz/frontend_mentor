@@ -14,18 +14,36 @@
         />
 
         <link rel="stylesheet" href="css/main.css" />
+        <script src="js/main.js" defer></script>
     </head>
     <body>
         <main>
             <div class="container">
+                <div class="card__img-box">
+                    <img src="./images/illustration-box-desktop.svg" alt="">
+                </div>
                 <div class="card">
-                    <div class="card__img">
-                        <img src="images/illustration-box-desktop.svg" alt="" class="card__img-box">
-                        <div class="card__img-bg"></div>
-                        <div class="card__img-woman"></div>
+                    <div class="card__img card--flex-grow">
+                        <img
+                            src="./images/illustration-woman-online-mobile.svg"
+                            alt=""
+                            class="card__mobile-img"
+                        />
+                        <img
+                            src="./images/bg-pattern-mobile.svg"
+                            alt=""
+                            class="card__mobile-pattern"
+                        />
+                        <div class="card__img-woman">
+                            <img
+                                src="./images/illustration-woman-online-desktop.svg"
+                                alt=""
+                            />
+                        </div>
+         
                     </div>
-                    <div class="card__faq">
-                        <h1>FAQ</h1>
+                    <div class="card__faq card--flex-grow">
+                        <h1 class="card__title">FAQ</h1>
                         <ul class="card__list">
                             <li class="card__item">
                                 <div class="card__visible">
@@ -44,7 +62,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <hr>
+                            <hr />
                             <li class="card__item">
                                 <div class="card__visible">
                                     <p>What is the maximum file upload size?</p>
@@ -62,7 +80,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <hr>
+                            <hr />
                             <li class="card__item">
                                 <div class="card__visible">
                                     <p>How do I reset my password?</p>
@@ -81,7 +99,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <hr>
+                            <hr />
                             <li class="card__item">
                                 <div class="card__visible">
                                     <p>Can I cancel my subscription?</p>
@@ -98,7 +116,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <hr>
+                            <hr />
                             <li class="card__item">
                                 <div class="card__visible">
                                     <p>Do you provide additional support?</p>
@@ -116,11 +134,12 @@
                                     </p>
                                 </div>
                             </li>
-                            <hr>
+                            <hr />
                         </ul>
                     </div>
                 </div>
             </div>
         </main>
+        <!-- <script src="js/main.js"></script> -->
     </body>
 </html>
