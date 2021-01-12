@@ -1,1 +1,198 @@
 @import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+// variables 
+:root {
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin media-large {
+    @media screen and (min-width: 800px) {
+        @content;
+    }
+}
+
+body {
+    font-size: 1.3rem;
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    @include flex-center();
+    background-color: var(--lightGrayishBlue);
+}
+
+main {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+    @include media-large() {
+        max-width: 80rem;
+    }
+}
+
+.card {
+    position: relative;
+    @include media-large() {
+        max-width: 75rem;
+    }
+    @include media-large() {
+        display: flex;
+    }
+
+    &__img {
+        height: 20rem;
+        background: url("../images/drawers.jpg");
+        background-position: 0% 40%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 1rem 1rem 0 0;
+
+        @include media-large() {
+            height: 28rem;
+            width: 70rem;
+            border-radius: 1rem 0 0 1rem;
+        }
+    }
+
+    &__info {
+        padding: 2rem 3rem;
+        margin-top: 1rem;
+    }
+
+    &__title {
+        color: var(--veryDarkGrayishBlue);
+        font-weight: 700;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+        @include media-large() {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+    }
+
+    &__text {
+        color: var(--grayishBlue);
+        line-height: 1.4;
+        word-spacing: 1px;
+    }
+
+    &__person {
+        display: flex;
+        margin-top: 3rem;
+        &-img {
+            height: 4.5rem;
+            width: 4.5rem;
+            
+            & img {
+                border-radius: 50%;
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        &-info {
+            margin-left: 1rem;
+            margin-right: auto;
+        }
+
+        &-name {
+            font-weight: 700;
+            color: var(--veryDarkGrayishBlue);
+        }
+
+        &-date {
+            color: var(--grayishBlue);
+        }
+
+        &-arrow {
+            background-color: var(--lightGrayishBlue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    &__active {
+        background-color: var(--veryDarkGrayishBlue);
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0 0 1rem 1rem;
+        height: 8rem;
+        align-items: center;
+        padding: 0 3rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .5s;
+
+        @include media-large() {
+            width: 28rem;
+            justify-content: center;
+            border-radius: 1rem;
+            top: 13rem;
+            left: initial;
+            right: -9.3rem;
+            height: 6rem;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -2.5rem;
+                border: 1.2rem solid transparent;
+                border-top: 1.5rem solid var(--veryDarkGrayishBlue);
+            }
+        }
+    }
+
+    &__share {
+        color: var(--grayishBlue);
+        margin-right: 2rem;
+    }
+
+    &__icons {
+        display: flex; 
+        align-items: center;
+    }
+
+    &__item {
+        & + & {
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__link {
+
+    }
+}
+
+.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+li {
+    list-style: none;
+}

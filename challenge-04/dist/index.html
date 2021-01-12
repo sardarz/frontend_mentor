@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <title>Frontend Mentor | Article preview component</title>
+        <title>Frontend Mentor | Article preview component</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  
-  <script src="./js/main.js" defer></script>
-</head>
-<body>
-    <main>
-        <div class="container">
-            <div class="card">
-                <div class="card__img"></div>
-                <div class="card__info">
-                    <div class="card__title">Shift the overall look and feel by adding these wonderful 
-                        touches to furniture in your home</div>
-                    
-                    <div class="card__text">
-                        Ever been in a room and felt like something was missing? Perhaps 
-                        it felt slightly bare and uninviting. I’ve got some simple tips 
-                        to help you make any room feel complete.
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+
+        <script src="./js/main.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="card">
+                    <div class="card__img"></div>
+                    <div class="card__info">
+                        <div class="card__title">
+                            Shift the overall look and feel by adding these
+                            wonderful touches to furniture in your home
+                        </div>
+
+                        <div class="card__text">
+                            Ever been in a room and felt like something was
+                            missing? Perhaps it felt slightly bare and
+                            uninviting. I’ve got some simple tips to help you
+                            make any room feel complete.
+                        </div>
+
+                        <div class="card__person">
+                            <div class="card__person-img">
+                                <img
+                                    src="./images/avatar-michelle.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__person-wrapper">
+                                <div class="card__person-info">
+                                    <div class="card__person-name">
+                                        Michelle Appleton
+                                    </div>
+                                    <div class="card__person-date">
+                                        28 Jun 2020
+                                    </div>
+                                </div>
+                                <div class="card__person-arrow">
+                                    <img src="./images/icon-share.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="card__person">
-                        <div class="card__person-img"><img src="./images/avatar-michelle.jpg" alt=""></div>
-                        <div class="card__person-wrapper">
-                            <div class="card__person-info">
-                                <div class="card__person-name">Michelle Appleton</div>
-                                <div class="card__person-date"></div>
-                            </div>
-                            <div class="card__person-arrow"><img src="./images/icon-share.svg" alt=""></div>
-                        </div>
+                    <div class="card__active">
+                        <p class="card__share">S H A R E</p>
+                        <ul class="card__icons">
+                            <li class="card__item">
+                                <a href="#" class="card__link"
+                                    ><img
+                                        src="./images/icon-facebook.svg"
+                                        alt=""
+                                /></a>
+                            </li>
+                            <li class="card__item">
+                                <a href="#" class="card__link"
+                                    ><img
+                                        src="./images/icon-twitter.svg"
+                                        alt=""
+                                /></a>
+                            </li>
+                            <li class="card__item">
+                                <a href="#" class="card__link"
+                                    ><img
+                                        src="./images/icon-pinterest.svg"
+                                        alt=""
+                                /></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>  
-
-</body>
+        </main>
+    </body>
 </html>
