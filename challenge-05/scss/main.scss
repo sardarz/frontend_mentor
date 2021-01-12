@@ -1,4 +1,4 @@
-@import "reset";
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
 :root {
@@ -6,6 +6,147 @@
     --grayishBlue: hsl(240, 18%, 77%);
 }
 
+// mixins
+@mixin media-large {
+    @media screen and (min-width: 1100px) {
+        @content;
+    }
+}
+
 body {
     font-size: 3.2rem;
+    font-family: 'Inter';
+}
+
+main {
+    margin: 3rem 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 35rem;
+    @include media-large() {
+        max-width: 110rem;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column-reverse;
+    @include media-large() {
+        flex-direction: row;
+        margin-top: 15rem;
+    }
+    &__left {
+        color: var(--darkBlue);
+        position: relative;
+        margin-top: 5rem;
+        @include media-large() {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            // left: 10rem;
+            z-index: 10;
+        }
+    }
+
+    &__quotes {
+        position: absolute;
+        transform: scale(0.5);
+        top: -4rem;
+        left: 33%;
+        @include media-large() {
+            transform: scale(1);
+            top: 0rem;
+            left: 20%;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        line-height: 1.4;
+        text-align: center;
+        @include media-large() {
+            text-align: left;
+            font-size: 3.2rem;
+            font-weight: 300;
+        }
+    }
+
+    &__user {
+        font-size: 1.7rem;
+        text-align: center;
+        margin-top: 2rem;
+        font-weight: 300;
+        @include media-large() {
+            display: flex;
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        @include media-large() {
+            margin-right: .7rem;
+        }
+    }
+
+    &__job {
+        color: var(--grayishBlue);
+    }
+
+    &__right {
+        position: relative;
+        background: url('../images/pattern-bg.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include media-large() {
+            flex: 1;
+            transform: scale(1.5);
+        }
+    }
+
+    &__img {
+        transform: scale(0.8);
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16),
+            0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    &__btns {
+        position: absolute;
+        display: flex;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 10rem;
+        background-color: white;
+        @include media-large() {
+            transform: scale(.8);
+            left: 8rem;
+            bottom: 2.5rem;
+        }
+    }
+
+    &__prev {
+        border-radius: 2rem 0 0 2rem;
+    }
+
+    &__next {
+        border-radius: 0 2rem 2rem 0;
+    }
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--grayishBlue);
 }
