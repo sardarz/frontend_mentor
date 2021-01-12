@@ -39,9 +39,239 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  color: var(--darkGrayishMagenta);
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 0 left 0, bottom 0 right 0;
+  }
+}
+
+main {
+  position: relative;
+  width: 100%;
+}
+
+.pattern-bottom {
+  background: url("../images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  height: 25rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .pattern-bottom {
+    display: none;
+  }
+}
+
+.pattern-top {
+  background: url("../images/bg-pattern-top-mobile.svg");
+  background-repeat: no-repeat;
+  height: 25rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .pattern-top {
+    display: none;
+  }
 }
 
 .container {
+  margin: 0 auto;
   max-width: 35rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 120rem;
+  }
+}
+
+.grid {
+  margin: 5rem 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30rem 30rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__left {
+    padding-right: 10rem;
+  }
+}
+
+.grid__title {
+  color: var(--prVeryDarkMagenta);
+  text-align: center;
+  line-height: 1;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__title {
+    font-size: 5rem;
+    text-align: left;
+  }
+}
+
+.grid__paragraph {
+  line-height: 1.5;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__paragraph {
+    text-align: left;
+  }
+}
+
+.grid__right {
+  margin-top: 2rem;
+  justify-self: end;
+}
+
+.grid__star {
+  padding: 2rem 5rem;
+  background-color: var(--lightGrayishMagenta);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__star {
+    flex-direction: row;
+    align-items: center;
+    width: 52rem;
+  }
+  .grid__star:nth-child(1) {
+    transform: translateX(-10rem);
+  }
+  .grid__star:nth-child(2) {
+    transform: translateX(-5rem);
+  }
+}
+
+.grid__star + .grid__star {
+  margin-top: 1rem;
+}
+
+.grid__stars {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__stars {
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+}
+
+.grid__review-text {
+  color: var(--prVeryDarkMagenta);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__review-text {
+    padding-right: 5rem;
+    transform: translateY(10%);
+  }
+}
+
+.grid__testimonials {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__testimonials {
+    grid-column: 1 / 3;
+    display: flex;
+  }
+}
+
+.grid__card {
+  background-color: var(--prVeryDarkMagenta);
+  color: white;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__card:nth-child(2) {
+    transform: translateY(-2rem);
+  }
+  .grid__card:nth-child(1) {
+    transform: translateY(-4rem);
+  }
+}
+
+.grid__card + .grid__card {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__card + .grid__card {
+    margin-top: 0;
+    margin-left: 3rem;
+  }
+}
+
+.grid__profile {
+  display: flex;
+  align-items: center;
+}
+
+.grid__profile-img {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 5rem;
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.grid__profile-info {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.grid__profile-name {
+  margin-bottom: 5px;
+}
+
+.grid__profile-buyer {
+  color: var(--prSoftPink);
+}
+
+.grid__card-text {
+  margin-top: 3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+.margin-left + .margin-left {
+  margin-left: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */
