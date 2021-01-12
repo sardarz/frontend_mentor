@@ -26,6 +26,10 @@ button, input, select, textarea {
 }
 
 :root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
   --veryDarkBlue: hsl(234, 12%, 34%);
   --grayishBlue: hsl(229, 6%, 66%);
   --veryLightGray: hsl(0, 0%, 98%);
@@ -34,5 +38,145 @@ button, input, select, textarea {
 body {
   font-size: 1.5rem;
   font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--veryLightGray);
+  color: var(--grayishBlue);
+}
+
+.container {
+  width: 100%;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 120rem;
+  }
+}
+
+.main {
+  margin: 3rem 0;
+}
+
+.main__header {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.main__subtitle {
+  font-weight: 200;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__subtitle {
+    font-size: 3rem;
+  }
+}
+
+.main__title {
+  font-size: 2.3rem;
+  color: var(--veryDarkBlue);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__title {
+    font-size: 3rem;
+  }
+}
+
+.main__info {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__info {
+    max-width: 50rem;
+    margin: 3rem auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__cards {
+    max-width: 103rem;
+    justify-content: space-between;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main__card {
+  background-color: #fff;
+  position: relative;
+  padding: 3rem 2rem;
+  height: 25rem;
+  width: 33rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 14px 18px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.main__card + .main__card {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__card + .main__card {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__card:nth-child(4) {
+    grid-column: 2/3;
+  }
+  .main__card:nth-child(odd) {
+    transform: translateY(50%);
+  }
+}
+
+.main__card::before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  height: 4px;
+  left: 0;
+  right: 0;
+}
+
+.main__card-title {
+  color: var(--veryDarkBlue);
+}
+
+.main__card-text {
+  margin-top: 1rem;
+}
+
+.main__icon {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.supervisor::before {
+  background-color: var(--cyan);
+}
+
+.team-bulder::before {
+  background-color: var(--red);
+}
+
+.karma::before {
+  background-color: var(--orange);
+}
+
+.calc::before {
+  background-color: var(--blue);
 }
 /*# sourceMappingURL=main.css.map */

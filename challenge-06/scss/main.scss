@@ -1,13 +1,157 @@
-@import "reset";
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 :root {
+    // primary
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    // neutral
     --veryDarkBlue: hsl(234, 12%, 34%);
     --grayishBlue: hsl(229, 6%, 66%);
     --veryLightGray: hsl(0, 0%, 98%);
 }
 
+// mixins
+@mixin media-large {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
 body {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryLightGray);
+    color: var(--grayishBlue);
+}
+
+.container {
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+
+    @include media-large() {
+        max-width: 120rem;
+    }
+}
+
+.main {
+    // background-color: red;
+    margin: 3rem 0;
+    &__content {
+    }
+
+    &__header {
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-weight: 200;
+        @include media-large() {
+            font-size: 3rem;
+        }
+    }
+
+    &__title {
+        font-size: 2.3rem;
+        color: var(--veryDarkBlue);
+        font-weight: 600;
+        @include media-large() {
+            font-size: 3rem;
+        }
+    }
+
+    &__info {
+        margin-top: 2rem;
+        @include media-large() {
+            max-width: 50rem;
+            margin: 3rem auto;
+        }
+    }
+
+    &__cards {
+        @include media-large() {
+            max-width: 103rem;
+            justify-content: space-between;
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__card {
+        background-color: #fff;
+        position: relative;
+        padding: 3rem 2rem;
+        height: 25rem;
+        width: 33rem;
+        margin: 0 auto;
+        border-radius: 1rem;
+        box-shadow: 0 14px 18px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+        overflow: hidden;
+        & + & {
+            margin-top: 2rem;
+            @include media-large() {
+                margin-top: 0;
+            }
+        }
+
+        @include media-large() {
+            &:nth-child(4) {
+                grid-column: 2/3;
+                // margin-top: 3rem;
+            }
+
+            &:nth-child(odd) {
+                transform: translateY(50%);
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0%;
+            height: 4px;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__card-title {
+        color: var(--veryDarkBlue);
+    }
+
+    &__card-text {
+        margin-top: 1rem;
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
+    }
+}
+
+.supervisor::before {
+    background-color: var(--cyan);
+}
+
+.team-bulder::before {
+    background-color: var(--red);
+}
+
+.karma::before {
+    background-color: var(--orange);
+}
+
+.calc::before {
+    background-color: var(--blue);
 }

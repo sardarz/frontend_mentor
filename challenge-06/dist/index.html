@@ -1,34 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  
-  <title>Frontend Mentor | Four card feature section</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="css/main.css" />
 
-</head>
-<body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
-
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-</body>
+        <title>Frontend Mentor | Four card feature section</title>
+    </head>
+    <body>
+        <main class="main">
+            <div class="container">
+                <div class="main__content">
+                    <div class="main__header">
+                        <h2 class="main__subtitle">
+                            Reliable, efficient delivery
+                        </h2>
+                        <h1 class="main__title">Powered by Technology</h1>
+                        <p class="main__info">
+                            Our Artificial Intelligence powered tools use
+                            millions of project data points to ensure that your
+                            project is successful
+                        </p>
+                    </div>
+                    <div class="main__cards">
+                        <div class="main__card supervisor">
+                            <h3 class="main__card-title">Supervisor</h3>
+                            <p class="main__card-text">
+                                Monitors activity to identify project roadblocks
+                            </p>
+                            <div class="main__icon">
+                                <img
+                                    src="./images/icon-supervisor.svg"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="main__card team-bulder">
+                            <h3 class="main__card-title">Team Builder</h3>
+                            <p class="main__card-text">
+                                Scans our talent network to create the optimal
+                                team for your project
+                            </p>
+                            <div class="main__icon">
+                                <img
+                                    src="./images/icon-team-builder.svg"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="main__card karma">
+                            <h3 class="main__card-title">Karma</h3>
+                            <p class="main__card-text">
+                                Regularly evaluates our talent to ensure quality
+                            </p>
+                            <div class="main__icon">
+                                <img src="./images/icon-karma.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="main__card calc">
+                            <h3 class="main__card-title">Calculator</h3>
+                            <p class="main__card-text">
+                                Uses data from past projects to provide better
+                                delivery estimates
+                            </p>
+                            <div class="main__icon">
+                                <img src="./images/icon-calculator.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
