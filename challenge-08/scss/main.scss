@@ -22,8 +22,12 @@ body {
     font-family: 'Poppins', sans-serif;
     color: white;
     background: url('../images/bg-intro-mobile.png');
-    // background-repeat: no-repeat;
     background-color: var(--prRed);
+
+    @include media-large() {
+        background: url('../images/bg-intro-desktop.png');
+        background-color: var(--prRed);
+    }
 }
 
 .container {
@@ -113,9 +117,6 @@ body {
         }
     }
 
-    &__list {
-    }
-
     &__item {
         position: relative;
         & > input {
@@ -138,7 +139,7 @@ body {
         transform: translateY(-50%);
         right: 3rem;
         pointer-events: none;
-        transition: opacity .5s;
+        transition: opacity 0.5s;
         opacity: 0;
     }
 
@@ -172,7 +173,7 @@ body {
         right: 0;
         bottom: -2.2rem;
         opacity: 0;
-        transition: opacity .5s;
+        transition: opacity 0.5s;
     }
 }
 
