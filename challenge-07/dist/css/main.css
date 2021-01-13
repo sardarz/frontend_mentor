@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+:root {
+  --desRed: hsl(0, 36%, 70%);
+  --softRed: hsl(0, 93%, 68%);
+  --darkRed: hsl(0, 6%, 24%);
+  --gr1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gr2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  background: var(--gr1);
+  color: var(--desRed);
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 120rem;
+    padding: 0 20rem;
+  }
+}
+
+.main {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    display: flex;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__primary {
+    width: 65%;
+    background: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.main__secondary {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__secondary {
+    display: block;
+    background-color: red;
+  }
+}
+
+.main__logo-wrapper {
+  padding: 3rem 0;
+}
+
+.main__logo-wrapper img {
+  width: 35%;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__logo-wrapper img {
+    width: initial;
+    padding: 0 20rem;
+  }
+}
+
+.main__hero-mobile {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__hero-mobile {
+    display: none;
+  }
+}
+
+.main__info {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.main__title {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__title {
+    font-size: 7rem;
+    margin-top: 12rem;
+    text-align: left;
+  }
+}
+
+.main__text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__text {
+    text-align: left;
+    width: 80%;
+    font-size: 1.6rem;
+  }
+}
+
+.main__input-field {
+  position: relative;
+  margin-top: 3rem;
+  height: 5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__input-field {
+    width: 80%;
+  }
+}
+
+.main__input-field::before {
+  content: 'Please provide a valid email';
+  position: absolute;
+  top: 6rem;
+  font-size: 1.4rem;
+  color: var(--softRed);
+  left: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.main__input-field.errorMsg::before {
+  opacity: 1;
+}
+
+.main__input {
+  border-radius: 3rem;
+  background-color: var(--gr1);
+  border: 1px solid var(--desRed);
+  color: var(--darkRed);
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0rem 2rem;
+}
+
+.main__input::placeholder {
+  color: var(--desRed);
+}
+
+.main__btn {
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  outline: none;
+  height: 100%;
+  padding: 0 2.7rem;
+  border-radius: 3rem;
+  background: var(--gr2);
+}
+
+@media screen and (min-width: 1200px) {
+  .main__btn {
+    padding: 0 3.5rem;
+  }
+}
+
+.main__btn::before {
+  content: '';
+  position: absolute;
+  border-radius: 3rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.5s;
+  opacity: 0;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.main__btn:hover {
+  opacity: 0.9;
+}
+
+.main__btn:hover::before {
+  opacity: 1;
+}
+
+.main__error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__error {
+    right: 9rem;
+  }
+}
+
+.text-black {
+  color: var(--darkRed);
+  font-weight: 600;
+}
+/*# sourceMappingURL=main.css.map */
