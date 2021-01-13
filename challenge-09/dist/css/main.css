@@ -35,5 +35,41 @@ button, input, select, textarea {
 body {
   font-size: 1.6rem;
   font-family: 'Karla', sans-serif;
+  background-color: var(--gray);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 35rem;
+}
+
+.main__card {
+  padding: 2rem;
+}
+
+.main__card-join-title {
+  color: var(--prCyan);
+}
+
+.main__card-join-yellow {
+  color: var(--prYellow);
+  font-weight: 700;
+}
+
+.join {
+  background-color: white;
+}
+
+.month {
+  background-color: var(--prCyan);
+}
+
+.why {
+  background: rgba(42, 178, 175, 0.8);
+}
+
+li {
+  list-style: none;
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,7 +9,81 @@
     --blue: hsl(218, 22%, 67%);
 }
 
+// mixins 
+@mixin media-large {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+// layout
 body {
     font-size: 1.6rem;
     font-family: 'Karla', sans-serif;
+    background-color: var(--gray);
+}
+
+.container {
+    width: 100%;
+    // background-color: rgba(0, 0, 0, .5);
+    margin: 0 auto;
+    max-width: 35rem;
+}
+
+.main {
+
+    &__grid {
+    
+    }
+
+    &__card {
+        padding: 2rem;
+        &-join-title {
+            color: var(--prCyan)
+        }
+
+        &-join-yellow {
+            color: var(--prYellow);
+            font-weight: 700;
+        }
+
+        &-join-desc {
+
+        }
+
+        &-common-title {
+
+        }
+
+        &-price {
+            
+        }
+
+        &-month-desc {
+
+        }
+
+        &-list {
+
+        }
+    }
+
+    &__btn {
+
+    }
+}
+
+.join {
+    background-color: white;
+}
+
+.month {
+    background-color: var(--prCyan);
+}
+
+.why {
+    background: rgba(42, 178, 175, .8);
+}
+
+li {
+    list-style: none;
 }
