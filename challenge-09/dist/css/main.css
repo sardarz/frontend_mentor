@@ -36,12 +36,38 @@ body {
   font-size: 1.6rem;
   font-family: 'Karla', sans-serif;
   background-color: var(--gray);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   width: 100%;
   margin: 0 auto;
   max-width: 35rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 70rem;
+  }
+}
+
+.main {
+  margin: 3rem 0;
+}
+
+.main__grid {
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .main__card {
@@ -55,10 +81,74 @@ body {
 .main__card-join-yellow {
   color: var(--prYellow);
   font-weight: 700;
+  margin: 2rem 0;
+}
+
+.main__card-join-desc {
+  color: var(--blue);
+}
+
+@media screen and (min-width: 1200px) {
+  .main__card-join-desc {
+    width: 90%;
+  }
+}
+
+.main__card-common-title {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.main__card-price {
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+
+.main__card-month-desc {
+  color: var(--gray);
+  margin: 1rem 0;
+}
+
+.main__card-list {
+  color: var(--gray);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__card {
+    padding: 4rem;
+  }
+}
+
+.main__btn {
+  background-color: var(--prYellow);
+  border-radius: 1rem;
+  box-shadow: 1px 3px 13px rgba(0, 0, 0, 0.3);
+  color: white;
+  display: block;
+  font-weight: 700;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  text-align: center;
+  transition: transform .1s;
+}
+
+.main__btn:active {
+  transform: translateY(2px);
 }
 
 .join {
   background-color: white;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    grid-column: 1/3;
+  }
 }
 
 .month {
@@ -67,6 +157,12 @@ body {
 
 .why {
   background: rgba(42, 178, 175, 0.8);
+}
+
+.accent {
+  font-size: 3rem;
+  color: white;
+  margin-right: 1rem;
 }
 
 li {
