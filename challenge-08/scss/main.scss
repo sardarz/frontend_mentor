@@ -47,7 +47,9 @@ body {
         margin: 3rem 0;
     }
     &__flex {
-        display: flex;
+        @include media-large() {
+            display: flex;
+        }
 
         & > div {
             flex: 1;
