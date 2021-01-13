@@ -37,4 +37,8 @@ body {
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
 }
+
+.main__warn {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

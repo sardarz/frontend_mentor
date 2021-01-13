@@ -14,3 +14,9 @@ body {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
 }
+
+.main {
+    &__warn {
+        display: none;
+    }
+}
