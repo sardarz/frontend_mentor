@@ -1,7 +1,7 @@
-@import "reset";
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-// variables 
+// variables
 :root {
     --prRed: hsl(0, 100%, 74%);
     --prGreen: hsl(154, 59%, 51%);
@@ -10,13 +10,193 @@
     --grayishBlue: hsl(246, 25%, 77%);
 }
 
+// mixins
+@mixin media-large {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
 body {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
+    color: white;
+    background: url('../images/bg-intro-mobile.png');
+    // background-repeat: no-repeat;
+    background-color: var(--prRed);
+}
+
+.container {
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+    @include media-large() {
+        max-width: 120rem;
+        padding: 2rem;
+    }
 }
 
 .main {
-    &__warn {
-        display: none;
+    margin: 7rem 0;
+
+    @include media-large() {
+        margin: 3rem 0;
     }
+    &__flex {
+        display: flex;
+
+        & > div {
+            flex: 1;
+        }
+    }
+
+    &__left {
+        text-align: center;
+        @include media-large() {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        line-height: 1.2;
+        font-size: 2.5rem;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+
+        @include media-large() {
+            text-align: left;
+            padding: 0;
+            font-size: 5rem;
+        }
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        font-weight: 500;
+        @include media-large() {
+            text-align: left;
+            width: 80%;
+        }
+    }
+
+    &__right {
+        margin-top: 5rem;
+    }
+
+    &__btn-free {
+        background-color: var(--accent);
+        border-radius: 1rem;
+        box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.3);
+        padding: 1.5rem 7rem;
+        transition: transform 0.1s;
+        &:active {
+            transform: translateY(2px);
+        }
+
+        @include media-large() {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        margin-top: 3rem;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 1rem;
+
+        @include media-large() {
+            padding: 4rem;
+        }
+    }
+
+    &__list {
+    }
+
+    &__item {
+        position: relative;
+        & > input {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            border: 2px solid var(--grayishBlue);
+            outline: none;
+            font-weight: 600;
+        }
+
+        & + & {
+            margin-top: 3rem;
+        }
+    }
+
+    &__error {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3rem;
+        pointer-events: none;
+        transition: opacity .5s;
+        opacity: 0;
+    }
+
+    &__btn-claim {
+        width: 100%;
+        background-color: var(--prGreen);
+        border-radius: 5px;
+        margin: 1.5rem 0;
+        margin-top: 3rem;
+        padding: 1.5rem 3rem;
+        text-transform: uppercase;
+        box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3);
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__license {
+        color: var(--grayishBlue);
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0 2rem;
+    }
+
+    &__warn {
+        color: var(--prRed);
+        font-size: 1.2rem;
+        font-weight: 600;
+        position: absolute;
+        right: 0;
+        bottom: -2.2rem;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    color: white;
+    border: 0;
+    outline: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.terms {
+    color: var(--prRed);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+input.redBorder {
+    border-color: var(--prRed);
+}
+
+.redPlaceholder::placeholder {
+    color: var(--prRed);
 }
