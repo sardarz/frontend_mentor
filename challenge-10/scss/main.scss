@@ -10,7 +10,140 @@
     --darkBlue: hsl(209, 33%, 12%);
 }
 
+// mixins
+@mixin media-large {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 2rem;
+}
+
+.container {
+    max-width: 35rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main {
+
+    &__content {
+        text-align: center;
+    }
+
+    &__logo {
+        margin-top: 5rem;
+        img {
+        margin: 0 auto;
+        }
+    }
+
+    &__title {
+        color: var(--gray);
+        font-weight: 300;
+        font-size: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    &__subscribe {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+
+    &__form {
+        margin: 5rem 0;
+        padding: 0 3rem;
+    }
+
+    &__email {
+        width: 100%;
+        border-radius: 3rem;
+        padding: 1rem 3rem;
+        outline: none;
+        font-size: 1.5rem;
+        border: 1px solid var(--scnBlue);
+        &::placeholder {
+            font-size: 1.5rem;
+            color: var(--scnBlue);
+        }
+    }
+
+    &__errorMsg {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s;
+    }
+
+    &__btn {
+        width: 100%;
+        border-radius: 3rem;
+        padding: 1rem 3rem;
+        outline: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        background-color: var(--prBlue);
+        margin-top: 1rem;
+        border: none;
+        transition: all .1s;
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__img {
+
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__icon {
+        margin-top: 8rem;
+        margin-bottom: 2rem;
+        & + & {
+            margin-left: 3rem;
+        }
+    }
+
+    &__copyright {
+        color: var(--gray);
+        font-size: 1.2rem;
+    }
+}
+
+.bold {
+    font-weight: 700;
+    color: var(--darkBlue);
+}
+
+a {
+    color: var(--prBlue);
+    border: 1px solid var(--scnBlue);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    @include flexCenter();
+    text-decoration: none;
+    transition: color .5s, background-color .5s;
+}
+
+a:hover {
+    background-color: var(--prBlue);
+    color: white;
+}
+
+li {
+    list-style: none;
 }

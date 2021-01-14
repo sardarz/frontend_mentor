@@ -5,20 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
-  
   <title>Frontend Mentor | Ping coming soon page</title>
 
 </head>
 <body>
-
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
+    <main class="main">
+        <div class="container">
+            <div class="main__content">
+                <div class="main__logo"><img src="./images/logo.svg" alt=""></div>
+                <h1 class="main__title">We are launching <span class="bold">soon!</span></h1>
+                <p class="main__subscribe">
+                    Subscribe and get notified
+                </p>
+                <form action="#" class="main__form">
+                    <input type="email" class="main__email" placeholder="Your email address...">
+                    <p class="main__errorMsg">Please provide a valid email address</p>
+                    <button class="main__btn">Notify Me</button>
+                </form>
+                <div class="main__img">
+                    <img src="./images/illustration-dashboard.png" alt="">
+                </div>
+                <ul class="main__icons">
+                    <li class="main__icon"><a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a></li>
+                    <li class="main__icon"><a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a></li>
+                    <li class="main__icon"><a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a></li>
+                </ul>
+                <div class="main__copyright">  &copy; Copyright Ping. All rights reserved.</div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
