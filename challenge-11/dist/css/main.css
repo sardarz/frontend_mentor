@@ -30,7 +30,12 @@ button, input, select, textarea {
   --prMagenta: hsl(300, 69%, 71%);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -42,9 +47,29 @@ body {
   background-position: 50% 0%;
 }
 
+@media screen and (min-width: 1200px) {
+  body {
+    background: url("../images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--prViolet);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .logo {
   width: 50%;
   margin-top: 3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    width: initial;
+    position: absolute;
+    top: 0rem;
+  }
 }
 
 .container {
@@ -53,8 +78,28 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 120rem;
+    padding: 0 2rem;
+  }
+}
+
 .main {
   margin-top: 5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__content {
+    display: flex;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__image {
+    width: 55%;
+  }
 }
 
 .main__info {
@@ -63,8 +108,21 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .main__info {
+    text-align: left;
+    margin-left: 4rem;
+  }
+}
+
 .main__title {
   font-size: 2.3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__title {
+    font-size: 4rem;
+  }
 }
 
 .main__desc {
@@ -84,10 +142,22 @@ body {
   padding: 1rem 0;
   width: 70%;
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
 }
 
 .main__btn:active {
   transform: translateY(2px);
+}
+
+.main__btn:hover {
+  background-color: var(--prMagenta);
+  color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__btn {
+    width: 40%;
+  }
 }
 
 .main__icons {
@@ -95,6 +165,14 @@ body {
   justify-content: center;
   margin-top: 8rem;
   margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__icons {
+    position: absolute;
+    right: 0;
+    bottom: -10rem;
+  }
 }
 
 li {
@@ -116,7 +194,7 @@ a {
   width: 3.3rem;
   justify-content: center;
   align-items: center;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 a:hover {

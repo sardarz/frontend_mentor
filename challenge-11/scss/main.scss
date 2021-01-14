@@ -1,54 +1,95 @@
-@import "reset";
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
 
-// variables 
+// variables
 :root {
     --prViolet: hsl(257, 40%, 49%);
     --prMagenta: hsl(300, 69%, 71%);
 }
 
-h1, h2, h3, h4, h5, h6 {
+@mixin mediaLarge {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: url("../images/bg-mobile.svg");
+    background: url('../images/bg-mobile.svg');
     background-color: var(--prViolet);
     background-repeat: no-repeat;
     background-position: 50% 0%;
+    @include mediaLarge() {
+        background: url('../images/bg-desktop.svg');
+        background-repeat: no-repeat;
+        background-color: var(--prViolet);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .logo {
     width: 50%;
     margin-top: 3rem;
+    @include mediaLarge() {
+        width: initial;
+        position: absolute;
+        top: 0rem;
+    }
 }
 
 .container {
     width: 100%;
     max-width: 30rem;
     margin: 0 auto;
+    @include mediaLarge() {
+        max-width: 120rem;
+        padding: 0 2rem;
+    }
 }
 
 .main {
     margin-top: 5rem;
 
     &__content {
-
+        @include mediaLarge() {
+            display: flex;
+            position: relative;
+        }
     }
 
     &__image {
-
+        @include mediaLarge() {
+            width: 55%;
+        }
     }
 
     &__info {
         color: white;
         margin-top: 6rem;
         text-align: center;
-    }   
+        @include mediaLarge() {
+            text-align: left;
+            margin-left: 4rem;
+        }
+    }
 
     &__title {
         font-size: 2.3rem;
+        @include mediaLarge() {
+            font-size: 4rem;
+        }
     }
 
     &__desc {
@@ -68,8 +109,18 @@ body {
         padding: 1rem 0;
         width: 70%;
         box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s;
         &:active {
             transform: translateY(2px);
+        }
+
+        &:hover {
+            background-color: var(--prMagenta);
+            color: white;
+        }
+
+        @include mediaLarge() {
+            width: 40%;
         }
     }
 
@@ -78,13 +129,12 @@ body {
         justify-content: center;
         margin-top: 8rem;
         margin-bottom: 3rem;
+        @include mediaLarge() {
+            position: absolute;
+            right: 0;
+            bottom: -10rem;
+        }
     }
-
-    &__icon {
-
-    }
-
-
 }
 
 li {
@@ -106,7 +156,7 @@ a {
     width: 3.3rem;
     justify-content: center;
     align-items: center;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 a:hover {
