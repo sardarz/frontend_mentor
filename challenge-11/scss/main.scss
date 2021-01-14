@@ -1,0 +1,16 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+// variables 
+:root {
+    --prVioliet: hsl(257, 40%, 49%);
+    --prMagenta: hsl(300, 69%, 71%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
