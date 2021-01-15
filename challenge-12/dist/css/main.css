@@ -28,7 +28,7 @@ button, input, select, textarea {
 :root {
   --prViolet: hsl(263, 55%, 52%);
   --prGrayishBlue: hsl(217, 19%, 35%);
-  --prBlackishBlue: hls(219, 29%, 14%);
+  --prBlackishBlue: hsl(219, 29%, 14%);
   --lightGray: hsl(0, 0%, 81%);
   --lightGrayishBlue: hls(210, 46%, 95%);
 }
@@ -36,5 +36,81 @@ button, input, select, textarea {
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 1.3rem;
+  background-color: var(--lightGray);
+}
+
+.container {
+  width: 100%;
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+.main {
+  margin-top: 3rem;
+}
+
+.main__card {
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.main__card + .main__card {
+  margin-top: 2rem;
+}
+
+.main__profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main__profile-img {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.5rem;
+}
+
+.main__profile-graduate {
+  margin-top: .2rem;
+}
+
+.main__title {
+  margin-bottom: 2rem;
+}
+
+.main__desc {
+  opacity: .7;
+  line-height: 1.5;
+}
+
+.purple {
+  background-color: var(--prViolet);
+  color: white;
+}
+
+.purple .main__profile-graduate {
+  opacity: .5;
+}
+
+.gray {
+  background-color: var(--prGrayishBlue);
+  color: white;
+}
+
+.white-short {
+  background-color: #fff;
+  color: var(--prGrayishBlue);
+}
+
+.black {
+  background-color: var(--prBlackishBlue);
+  color: white;
+}
+
+.white-long {
+  background-color: #fff;
+  color: var(--prGrayishBlue);
 }
 /*# sourceMappingURL=main.css.map */
