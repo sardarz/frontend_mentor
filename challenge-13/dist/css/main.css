@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+:root {
+  --gradient: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  --paleBlue: hsl(243, 100%, 93%);
+  --grayishBlue: hsl(229, 7%, 55%);
+  --darkBlue: hsl(228, 56%, 26%);
+  --veryDarkBlue: hsl(229, 57%, 11%);
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=main.css.map */
