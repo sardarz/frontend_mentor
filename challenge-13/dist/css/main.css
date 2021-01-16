@@ -47,14 +47,38 @@ body {
   min-height: 100vh;
 }
 
+@media screen and (min-width: 800px) {
+  body {
+    background: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 130%;
+    background-color: var(--veryDarkBlue);
+  }
+}
+
 .container {
   max-width: 33rem;
   width: 100%;
   margin: 0 auto;
 }
 
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 120rem;
+  }
+}
+
 .main {
   width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .main__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
 }
 
 .main__fylo {
@@ -64,9 +88,22 @@ body {
   border-radius: 1rem 8rem 1rem 1rem;
 }
 
+@media screen and (min-width: 800px) {
+  .main__fylo {
+    margin: 0;
+    width: 30%;
+  }
+}
+
 .main__logo {
   background-color: var(--darkBlue);
   margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 800px) {
+  .main__logo {
+    margin-bottom: 4rem;
+  }
 }
 
 .main__icons {
@@ -95,11 +132,25 @@ body {
   position: relative;
 }
 
+@media screen and (min-width: 800px) {
+  .main__storage {
+    width: 55%;
+    margin-left: 3rem;
+  }
+}
+
 .main__title {
   font-weight: 400;
   font-size: 1.4rem;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .main__title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .main__progress {
@@ -140,9 +191,14 @@ body {
   margin-bottom: 3rem;
 }
 
+@media screen and (min-width: 800px) {
+  .main__gb-status {
+    margin-bottom: 0;
+  }
+}
+
 .main__gb-left {
   background-color: white;
-  width: 50%;
   padding: 2rem;
   border-radius: 1rem;
   position: absolute;
@@ -153,6 +209,27 @@ body {
   color: var(--grayishBlue);
   left: 50%;
   transform: translateX(-50%);
+  width: 50%;
+}
+
+@media screen and (min-width: 800px) {
+  .main__gb-left {
+    left: initial;
+    transform: translateX(0);
+    width: 18rem;
+    padding: 1.5rem 2rem;
+    right: 4rem;
+    top: -35%;
+  }
+  .main__gb-left::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1.5rem;
+    border: 1.5rem solid white;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
 }
 
 li {
@@ -168,5 +245,11 @@ li {
   font-size: 3rem;
   color: var(--veryDarkBlue);
   margin-right: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .bold {
+    font-size: 4rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

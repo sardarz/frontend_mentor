@@ -12,7 +12,7 @@
 
 // mixins
 @mixin mediaLarge {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 800px) {
         @content;
     }
 }
@@ -29,18 +29,32 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    @include mediaLarge() {
+        background: url("../images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 130%;
+        background-color: var(--veryDarkBlue);
+    }
 }
 
 .container {
     max-width: 33rem;
     width: 100%;
     margin: 0 auto;
+    @include mediaLarge() {
+        max-width: 120rem;
+    }
 }
 
 .main {
     width: 100%;
-
     &__content {
+        @include mediaLarge() {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
     }
 
     &__fylo {
@@ -48,11 +62,18 @@ body {
         margin-bottom: 2rem;
         padding: 4rem;
         border-radius: 1rem 8rem 1rem 1rem;
+        @include mediaLarge() {
+            margin: 0;
+            width: 30%;
+        }
     }
 
     &__logo {
         background-color: var(--darkBlue);
         margin-bottom: 3rem;
+        @include mediaLarge() {
+            margin-bottom: 4rem;
+        }
     }
 
     &__icons {
@@ -78,6 +99,10 @@ body {
         border-radius: 1rem;
         padding: 4rem;
         position: relative;
+        @include mediaLarge() {
+            width: 55%;
+            margin-left: 3rem;
+        }
     }
 
     &__title {
@@ -85,6 +110,10 @@ body {
         font-size: 1.4rem;
         margin-bottom: 1rem;
         text-align: center;
+        @include mediaLarge() {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
     }
 
     &__progress {
@@ -123,6 +152,9 @@ body {
         justify-content: space-between;
         font-weight: 700;
         margin-bottom: 3rem;
+        @include mediaLarge() {
+            margin-bottom: 0;
+        }
     }
 
     &__gb {
@@ -130,7 +162,6 @@ body {
 
     &__gb-left {
         background-color: white;
-        width: 50%;
         padding: 2rem;
         border-radius: 1rem;
         position: absolute;
@@ -141,6 +172,25 @@ body {
         color: var(--grayishBlue);
         left: 50%;
         transform: translateX(-50%);
+        width: 50%;
+        @include mediaLarge() {
+            left: initial;
+            transform: translateX(0);
+            width: 18rem;
+            padding: 1.5rem 2rem;
+            right: 4rem;
+            top: -35%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: -1.5rem;
+                border: 1.5rem solid white;
+                border-left-color: transparent;
+                border-bottom-color: transparent;
+            }
+        }
     }
 }
 
@@ -157,4 +207,7 @@ li {
     font-size: 3rem;
     color: var(--veryDarkBlue);
     margin-right: 1rem;
+    @include mediaLarge() {
+        font-size: 4rem;
+    }
 }
