@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+:root {
+  --limeGreen: hsl(163, 72%, 41%);
+  --brightRed: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+  --darkTheme: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --veryDarkBlueBG: hsl(230, 17%, 14%);
+  --veryDarkBlueTopBG: hsl( 232, 19%, 15%);
+  --darkDesaturatedBlueCardBG: hsl(228, 28%, 20%);
+  --desaturatedBlueText: hsl(228, 34%, 66%);
+  --lightTheme: hsl(230, 22%, 74%);
+  --veryPaleBlueTopBG: hsl(225, 100%, 98%);
+  --lightGrayishBlueCardBg:hsl(227, 47%, 96%);
+  --darkGrayishBlueText: hsl(228, 12%, 44%);
+  --veryDarkBlueText: hsl(230, 17%, 14%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=main.css.map */
