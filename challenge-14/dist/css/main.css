@@ -47,5 +47,19 @@ button, input, select, textarea {
 body {
   font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 35rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

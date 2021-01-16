@@ -29,8 +29,133 @@
         @content;
     }
 }
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     font-size: 1.4rem;
+    min-height: 100vh;
+    @include flexCenter();
+}
+
+.container {
+    max-width: 35rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+
+    &__content {
+
+    }
+
+    &__social {
+
+    }
+
+    &__header {
+
+    }
+
+    &__header-title {
+        
+    }
+
+    &__title {
+        
+    }
+
+    &__subtitle {
+        
+    }
+
+    &__toggle-wrapper {
+        
+    }
+
+    &__toggle-title {
+        
+    }
+
+    &__toggle {
+        
+    }
+
+    &__btn {
+        
+    }
+
+    &__cards {
+
+    }
+
+    &__card {
+
+    }
+
+    &__card-name-wrapper {
+
+    }
+
+    &__card-number {
+
+    }
+
+    &__card-followers {
+
+    }
+
+    &__card-change {
+
+    }
+
+    &__overview {
+
+    }
+
+    &__overview-title-wrapper {
+
+    }
+
+    &__overview-title {
+
+    }
+
+    &__overview-cards {
+
+    }
+
+    &__overview-card {
+
+    }
+
+    &__overview-card-upper {
+
+    }
+
+    &__overview-card-stat {
+
+    }
+
+    &__overview-card-img {
+
+    }
+
+    &__overview-card-bottom {
+
+    }
+
+    &__overview-card-number {
+
+    }
+
+    &__overview-card-percentage {
+        
+    }
 }
