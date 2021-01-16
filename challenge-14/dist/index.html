@@ -1,194 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="main.js" defer></script>
 
-</head>
-<body>
-    <main class="main">
-        <div class="container">
-            <div class="main__content">
-                <div class="main_social">
-                    <div class="main__header">
-                        <div class="main__header-title">
-                            <h3 class="main__title">Social Media Dashboard</h3>
-                            <div class="main__subtitle">
-  Total Followers: 23,004
-
+        <title>Frontend Mentor | [Challenge Name Here]</title>
+    </head>
+    <body>
+        <main class="main">
+            <div class="container">
+                <div class="main__content">
+                    <div class="main_social">
+                        <div class="main__header">
+                            <div class="main__header-title">
+                                <h3 class="main__title">
+                                    Social Media Dashboard
+                                </h3>
+                                <div class="main__subtitle">
+                                    Total Followers: 23,004
+                                </div>
+                            </div>
+                            <div class="main__toggle-wrapper">
+                                <div class="main__toggle-title">Dark Mode</div>
+                                <div class="main__toggle">
+                                    <div class="main__btn"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="main__toggle-wrapper">
-                            <div class="main__toggle-title">
-                                Dark Mode
+                        <div class="main__cards">
+                            <div class="main__card">
+                                <div class="main__card-name-wrapper">
+                                    <img
+                                        src="./images/icon-facebook.svg"
+                                        alt=""
+                                    />
+                                    <p>@nathanf</p>
+                                </div>
+                                <div class="main__card-number">1987</div>
+                                <div class="main__card-followers">
+                                    followers
+                                </div>
+                                <div class="main__card-change change-up">
+                                    12 Today
+                                </div>
                             </div>
-                            <div class="main__toggle">
-                                <div class="main__btn">
-
+                            <div class="main__card">
+                                <div class="main__card-name-wrapper">
+                                    <img
+                                        src="./images/icon-twitter.svg"
+                                        alt=""
+                                    />
+                                    <p>@nathanf</p>
+                                </div>
+                                <div class="main__card-number">1044</div>
+                                <div class="main__card-followers">
+                                    followers
+                                </div>
+                                <div class="main__card-change change-up">
+                                    99 Today
+                                </div>
+                            </div>
+                            <div class="main__card">
+                                <div class="main__card-name-wrapper">
+                                    <img
+                                        src="./images/icon-instagram.svg"
+                                        alt=""
+                                    />
+                                    <p>@realnathanf</p>
+                                </div>
+                                <div class="main__card-number">11k</div>
+                                <div class="main__card-followers">
+                                    followers
+                                </div>
+                                <div class="main__card-change change-up">
+                                    1099 Today
+                                </div>
+                            </div>
+                            <div class="main__card">
+                                <div class="main__card-name-wrapper">
+                                    <img
+                                        src="./images/icon-youtube.svg"
+                                        alt=""
+                                    />
+                                    <p>Nathan F.</p>
+                                </div>
+                                <div class="main__card-number">8239</div>
+                                <div class="main__card-followers">
+                                    subscribers
+                                </div>
+                                <div class="main__card-change change-down">
+                                    144 Today
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="main__cards">
-                        <div class="main__card">
-                            <div class="main__card-name-wrapper">
-                                <img src="./images/icon-facebook.svg" alt="">
-                                <p>
-                                    @nathanf
-                                </p>
-                            </div>
-                            <div class="main__card-number">
-                                1987
-                            </div>
-                            <div class="main__card-followers">
-                                followers
-                            </div>
-                            <div class="main__card-change change-up">12 Today</div>
-                        </div>
-                        <div class="main__card">
-                            <div class="main__card-name-wrapper">
-                                <img src="./images/icon-twitter.svg" alt="">
-                                <p>
-                                    @nathanf
-                                </p>
-                            </div>
-                            <div class="main__card-number">
-                                1044
-                            </div>
-                            <div class="main__card-followers">
-                                followers
-                            </div>
-                            <div class="main__card-change change-down">99 Today</div>
-                        </div>
-                        <div class="main__card">
-                            <div class="main__card-name-wrapper">
-                                <img src="./images/icon-instagram.svg" alt="">
-                                <p>
-                                    @realnathanf
-                                </p>
-                            </div>
-                            <div class="main__card-number">
-                                11k
-                            </div>
-                            <div class="main__card-followers">
-                                followers
-                            </div>
-                            <div class="main__card-change change-up">1099 Today</div>
-                        </div>
-                        <div class="main__card">
-                            <div class="main__card-name-wrapper">
-                                <img src="./images/icon-youtube.svg" alt="">
-                                <p>
-                                    Nathan F.
-                                </p>
-                            </div>
-                            <div class="main__card-number">
-                                8239
-                            </div>
-                            <div class="main__card-followers">
-                                subscribers
-                            </div>
-                            <div class="main__card-change change-down">144 Today</div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="main__overview">
-                    <div class="main__overview-title-wrapper">
-                        <h3 class="main__overview-title">
-                            Overview - Today
-                        </h3>
+                    <div class="main__overview">
+                        <div class="main__overview-title-wrapper">
+                            <h3 class="main__overview-title">
+                                Overview - Today
+                            </h3>
+                        </div>
                         <div class="main__overview-cards">
                             <div class="main__overview-card">
                                 <div class="main__overview-card-upper">
-                                    <p class="main__overview-card-stat">Page Views</p>
-                                    <img src="./images/icon-facebook.svg" alt="" class="main__overview-card-img">
+                                    <p class="main__overview-card-stat">
+                                        Page Views
+                                    </p>
+                                    <img
+                                        src="./images/icon-facebook.svg"
+                                        alt=""
+                                        class="main__overview-card-img"
+                                    />
                                 </div>
                                 <div class="main__overview-card-bottom">
-                                    <div class="main__overview-card-number">87</div>
-                                    <div class="main__overview-card-percentage change-up">3%</div>
+                                    <div class="main__overview-card-number">
+                                        87
+                                    </div>
+                                    <div
+                                        class="main__overview-card-percentage change-up"
+                                    >
+                                        3%
+                                    </div>
                                 </div>
                             </div>
                             <div class="main__overview-card">
                                 <div class="main__overview-card-upper">
-                                    <p class="main__overview-card-stat">Likes</p>
-                                    <img src="./images/icon-facebook.svg" alt="" class="main__overview-card-img">
+                                    <p class="main__overview-card-stat">
+                                        Likes
+                                    </p>
+                                    <img
+                                        src="./images/icon-facebook.svg"
+                                        alt=""
+                                        class="main__overview-card-img"
+                                    />
                                 </div>
                                 <div class="main__overview-card-bottom">
-                                    <div class="main__overview-card-number">52</div>
-                                    <div class="main__overview-card-percentage change-down">2%</div>
+                                    <div class="main__overview-card-number">
+                                        52
+                                    </div>
+                                    <div
+                                        class="main__overview-card-percentage change-down"
+                                    >
+                                        2%
+                                    </div>
                                 </div>
                             </div>
                             <div class="main__overview-card">
                                 <div class="main__overview-card-upper">
-                                    <p class="main__overview-card-stat">Likes</p>
-                                    <img src="./images/icon-instagram.svg" alt="" class="main__overview-card-img">
+                                    <p class="main__overview-card-stat">
+                                        Likes
+                                    </p>
+                                    <img
+                                        src="./images/icon-instagram.svg"
+                                        alt=""
+                                        class="main__overview-card-img"
+                                    />
                                 </div>
                                 <div class="main__overview-card-bottom">
-                                    <div class="main__overview-card-number">5462</div>
-                                    <div class="main__overview-card-percentage change-up">2257%</div>
+                                    <div class="main__overview-card-number">
+                                        5462
+                                    </div>
+                                    <div
+                                        class="main__overview-card-percentage change-up"
+                                    >
+                                        2257%
+                                    </div>
                                 </div>
                             </div>
                             <div class="main__overview-card">
                                 <div class="main__overview-card-upper">
-                                    <p class="main__overview-card-stat">Profile Views</p>
-                                    <img src="./images/icon-instagram.svg" alt="" class="main__overview-card-img">
+                                    <p class="main__overview-card-stat">
+                                        Profile Views
+                                    </p>
+                                    <img
+                                        src="./images/icon-instagram.svg"
+                                        alt=""
+                                        class="main__overview-card-img"
+                                    />
                                 </div>
                                 <div class="main__overview-card-bottom">
-                                    <div class="main__overview-card-number">52k</div>
-                                    <div class="main__overview-card-percentage change-up">1375%</div>
+                                    <div class="main__overview-card-number">
+                                        52k
+                                    </div>
+                                    <div
+                                        class="main__overview-card-percentage change-up"
+                                    >
+                                        1375%
+                                    </div>
                                 </div>
                             </div>
                             <div class="main__overview-card">
                                 <div class="main__overview-card-upper">
-                                    <p class="main__overview-card-stat">Retweets</p>
-                                    <img src="./images/icon-twitter.svg" alt="" class="main__overview-card-img">
+                                    <p class="main__overview-card-stat">
+                                        Retweets
+                                    </p>
+                                    <img
+                                        src="./images/icon-twitter.svg"
+                                        alt=""
+                                        class="main__overview-card-img"
+                                    />
                                 </div>
                                 <div class="main__overview-card-bottom">
-                                    <div class="main__overview-card-number">117</div>
-                                    <div class="main__overview-card-percentage change-up">303%</div>
+                                    <div class="main__overview-card-number">
+                                        117
+                                    </div>
+                                    <div
+                                        class="main__overview-card-percentage change-up"
+                                    >
+                                        303%
+                                    </div>
                                 </div>
                             </div>
                             <div class="main__overview-card">
                                 <div class="main__overview-card-upper">
-                                    <p class="main__overview-card-stat">Likes</p>
-                                    <img src="./images/icon-twitter.svg" alt="" class="main__overview-card-img">
+                                    <p class="main__overview-card-stat">
+                                        Likes
+                                    </p>
+                                    <img
+                                        src="./images/icon-twitter.svg"
+                                        alt=""
+                                        class="main__overview-card-img"
+                                    />
                                 </div>
                                 <div class="main__overview-card-bottom">
-                                    <div class="main__overview-card-number">507</div>
-                                    <div class="main__overview-card-percentage change-up">553%</div>
+                                    <div class="main__overview-card-number">
+                                        507
+                                    </div>
+                                    <div
+                                        class="main__overview-card-percentage change-up"
+                                    >
+                                        553%
+                                    </div>
                                 </div>
                             </div>
                             <div class="main__overview-card">
                                 <div class="main__overview-card-upper">
-                                    <p class="main__overview-card-stat">Likes</p>
-                                    <img src="./images/icon-youtube.svg" alt="" class="main__overview-card-img">
+                                    <p class="main__overview-card-stat">
+                                        Likes
+                                    </p>
+                                    <img
+                                        src="./images/icon-youtube.svg"
+                                        alt=""
+                                        class="main__overview-card-img"
+                                    />
                                 </div>
                                 <div class="main__overview-card-bottom">
-                                    <div class="main__overview-card-number">107</div>
-                                    <div class="main__overview-card-percentage change-down">19%</div>
+                                    <div class="main__overview-card-number">
+                                        107
+                                    </div>
+                                    <div
+                                        class="main__overview-card-percentage change-down"
+                                    >
+                                        19%
+                                    </div>
                                 </div>
                             </div>
                             <div class="main__overview-card">
                                 <div class="main__overview-card-upper">
-                                    <p class="main__overview-card-stat">Total Views</p>
-                                    <img src="./images/icon-youtube.svg" alt="" class="main__overview-card-img">
+                                    <p class="main__overview-card-stat">
+                                        Total Views
+                                    </p>
+                                    <img
+                                        src="./images/icon-youtube.svg"
+                                        alt=""
+                                        class="main__overview-card-img"
+                                    />
                                 </div>
                                 <div class="main__overview-card-bottom">
-                                    <div class="main__overview-card-number">1407</div>
-                                    <div class="main__overview-card-percentage change-down">12%</div>
+                                    <div class="main__overview-card-number">
+                                        1407
+                                    </div>
+                                    <div
+                                        class="main__overview-card-percentage change-down"
+                                    >
+                                        12%
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-</body>
+        </main>
+    </body>
 </html>
