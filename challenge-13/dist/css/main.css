@@ -40,15 +40,133 @@ body {
   color: var(--paleBlue);
   background: url("../images/bg-mobile.png");
   background-repeat: no-repeat;
+  background-position: center 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 35rem;
+  max-width: 33rem;
   width: 100%;
   margin: 0 auto;
 }
 
+.main {
+  width: 100%;
+}
+
+.main__fylo {
+  background-color: var(--darkBlue);
+  margin-bottom: 2rem;
+  padding: 4rem;
+  border-radius: 1rem 8rem 1rem 1rem;
+}
+
+.main__logo {
+  background-color: var(--darkBlue);
+  margin-bottom: 3rem;
+}
+
+.main__icons {
+  display: flex;
+  align-items: center;
+}
+
+.main__icon {
+  background-color: var(--veryDarkBlue);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__icon + .main__icon {
+  margin-left: 2rem;
+}
+
+.main__storage {
+  background-color: var(--darkBlue);
+  border-radius: 1rem;
+  padding: 4rem;
+  position: relative;
+}
+
+.main__title {
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.main__progress {
+  background-color: var(--veryDarkBlue);
+  width: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main__bar {
+  width: 70%;
+  height: 1.4rem;
+  background: var(--gradient);
+  border-radius: 1rem;
+  position: absolute;
+  left: 3px;
+}
+
+.main__circle {
+  border-radius: 50%;
+  background-color: #fff;
+  height: 1rem;
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+}
+
+.main__gb-status {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.main__gb-left {
+  background-color: white;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: var(--grayishBlue);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 li {
   list-style: none;
+}
+
+.accent {
+  font-weight: 700;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--veryDarkBlue);
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
