@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="css/main.css" />
 
-</head>
-<body>
-
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-  
-  0 GB
-  1000 GB
-
-</body>
+        <title>Frontend Mentor | Fylo data storage component</title>
+    </head>
+    <body>
+        <main class="main">
+            <div class="container">
+                <div class="main__content">
+                    <div class="main__fylo">
+                        <div class="main__logo">
+                            <img src="./images/logo.svg" alt="" />
+                        </div>
+                        <ul class="main__icons">
+                            <li class="main__icon">
+                                <img src="./images/icon-document.svg" alt="" />
+                            </li>
+                            <li class="main__icon">
+                                <img src="./images/icon-folder.svg" alt="" />
+                            </li>
+                            <li class="main__icon">
+                                <img src="./images/icon-upload.svg" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main__storage">
+                        <h3 class="main__title">
+                            You’ve used <span class="accent">815 GB</span> of
+                            your storage
+                        </h3>
+                        <div class="main__progress">
+                            <div class="main__bar">
+                                <div class="main__circle"></div>
+                            </div>
+                        </div>
+                        <div class="main__gb-status">
+                            <p class="main__gb">0 GB</p>
+                            <p class="main__gb">1000 GB</p>
+                        </div>
+                        <div class="main__gb-left"><span class="bold">185</span> GB Left</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>

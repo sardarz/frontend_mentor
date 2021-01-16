@@ -1,16 +1,93 @@
-@import "reset";
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-// variables 
+// variables
 :root {
-    --gradient: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-    --paleBlue: hsl(243, 100%, 93%);
-    --grayishBlue: hsl(229, 7%, 55%);
-    --darkBlue: hsl(228, 56%, 26%);
-    --veryDarkBlue: hsl(229, 57%, 11%);
+  --gradient: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  --paleBlue: hsl(243, 100%, 93%);
+  --grayishBlue: hsl(229, 7%, 55%);
+  --darkBlue: hsl(228, 56%, 26%);
+  --veryDarkBlue: hsl(229, 57%, 11%);
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  background-color: var(--veryDarkBlue);
+  color: var(--paleBlue);
+  background: url('../images/bg-mobile.png');
+  background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 35rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main {
+
+    &__content {
+
+    }
+
+    &__fylo {
+
+    }
+
+    &__logo {
+
+    }
+
+    &__icons {
+
+    }
+
+    &__icon {
+
+    }
+
+    &__storage {
+
+    }
+
+    &__title {
+
+    }
+
+    &__progress {
+
+    }
+
+    &__bar {
+
+    }
+
+    &__circle {
+
+    }
+
+    &__gb-status {
+
+    }
+
+    &__gb {
+
+    }
+
+    &__gb-left {
+
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.accent {
+
+}
+
+.bold {
+    
 }

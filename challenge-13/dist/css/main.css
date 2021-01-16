@@ -36,5 +36,19 @@ button, input, select, textarea {
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.4rem;
+  background-color: var(--veryDarkBlue);
+  color: var(--paleBlue);
+  background: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 35rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
 }
 /*# sourceMappingURL=main.css.map */
