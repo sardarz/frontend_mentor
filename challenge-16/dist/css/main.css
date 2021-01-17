@@ -46,6 +46,12 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 90rem;
+  }
+}
+
 .main {
   margin-top: 5rem;
 }
@@ -88,6 +94,14 @@ body {
   transition: left .2s;
 }
 
+@media screen and (min-width: 1000px) {
+  .main__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+}
+
 .main__card {
   background-color: #fff;
   border-radius: 1rem;
@@ -96,6 +110,21 @@ body {
 
 .main__card + .main__card {
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .main__card + .main__card {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main__card {
+    padding: 5rem 2rem;
+  }
+  .main__card:nth-child(2) {
+    padding: 7rem 2rem;
+  }
 }
 
 .main__plan {

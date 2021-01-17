@@ -12,7 +12,7 @@
 
 // mixins
 @mixin mediaLarge {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1000px) {
         @content;
     }
 }
@@ -28,6 +28,9 @@ body {
     width: 100%;
     max-width: 33rem;
     margin: 0 auto;
+    @include mediaLarge() {
+        max-width: 90rem;
+    }
 }
 
 .main {
@@ -70,12 +73,31 @@ body {
         transition: left .2s;
     }
 
+    &__grid {
+        @include mediaLarge() {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+        }
+    }
+
     &__card {
         background-color: #fff;
         border-radius: 1rem;
         padding: 2rem;
         & + & {
             margin-top: 2rem;
+
+            @include mediaLarge() {
+                margin-top: 0;
+            }
+        }
+        @include mediaLarge() {
+            padding: 5rem 2rem;
+
+            &:nth-child(2) {
+                padding: 7rem 2rem;
+            }
         }
     }
 
