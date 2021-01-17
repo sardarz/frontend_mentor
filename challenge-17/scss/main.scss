@@ -1,0 +1,25 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+// variables 
+:root {
+    --prRed: hsl(0, 100%, 68%);
+    --veryDarkBlue: hsl(230, 29%, 20%);
+    --darkGrayishBlue: hsl(230, 11%, 40%);
+    --grayishBlue: hsl(231, 7%, 65%);
+    --lightGrayishBlue: hsl(207, 33%, 95%);
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
