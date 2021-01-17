@@ -1,7 +1,7 @@
-@import "reset";
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
 
-// variables 
+// variables
 :root {
     --prViolet: hsl(256, 26%, 20%);
     --prGrayishBlue: hsl(216, 30%, 68%);
@@ -16,10 +16,14 @@ $mobilePadding: 0 3rem;
 body {
     font-family: 'Karla', sans-serif;
     font-size: 1.6rem;
-
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'DM Serif Display', serif;
     font-weight: 400;
 }
@@ -28,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     max-width: 37.5rem;
     margin: 0 auto;
+    // padding: 3rem;
 }
 
 .header {
@@ -45,7 +50,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     &__logo {
-
     }
 
     &__toggle-wrapper {
@@ -55,11 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 
     &__hamburger {
         position: absolute;
-        transition: opacity .5s;
+        transition: opacity 0.5s;
     }
 
     &__close {
-
     }
 }
 
@@ -73,7 +76,6 @@ body.nav-btn {
     }
 }
 
-
 .mobile-nav-list {
     position: absolute;
     display: flex;
@@ -85,13 +87,13 @@ body.nav-btn {
     top: 8rem;
     height: calc(100vh - 8rem);
     width: 100%;
-    background: url("../images/bg-pattern-mobile-nav.svg");
+    background: url('../images/bg-pattern-mobile-nav.svg');
     background-repeat: no-repeat;
     background-position: 0 bottom;
     background-size: contain;
     background-color: var(--veryDarkViolet);
     transform: translateY(-150%);
-    transition: transform .5s;
+    transition: transform 0.5s;
     z-index: 10;
 }
 
@@ -120,14 +122,10 @@ body.nav-btn {
     &__img img {
         margin: 0 auto;
     }
-
-    position: relative;
     
+    position: relative;
+    width: 100%;
     &__content {
-        background: url("../images/bg-pattern-intro-left-mobile.svg");
-        background-position: left top;
-        background-repeat: no-repeat;
-        background-color: var(--veryDarkViolet);
         padding: 8rem 3rem;
         color: white;
         display: flex;
@@ -135,6 +133,10 @@ body.nav-btn {
         align-items: center;
         text-align: center;
         position: relative;
+        background: url('../images/bg-pattern-intro-left-mobile.svg');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-color: var(--veryDarkViolet);
     }
 
     &__title {
@@ -146,7 +148,7 @@ body.nav-btn {
 
     &__desc {
         line-height: 1.6;
-        opacity: .8;
+        opacity: 0.8;
     }
     .mobile-bg-pattern-right {
         position: absolute;
@@ -197,7 +199,6 @@ body.nav-btn {
 
     &__card-title {
         margin-top: 3rem;
-
     }
 
     &__card-desc {
@@ -206,9 +207,102 @@ body.nav-btn {
     }
 }
 
+.find {
+    padding: 3rem;
+
+    &__content {
+        color: white;
+        text-align: center;
+        padding: 5rem 3rem;
+        background: url("../images/bg-pattern-how-we-work-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: right 0;
+        background-color: var(--veryDarkViolet);
+    }
+
+    &__title {
+        font-size: 3rem;
+        line-height: 1;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.footer {
+    margin-top: 5rem;
+    background: url("../images/bg-pattern-footer-mobile.svg");
+    background-repeat: no-repeat;
+    // background-size: contain;
+    background-color: var(--lightGray);
+    &__content {
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__insure {
+        margin-bottom: 3rem;
+        margin-top: 4rem;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+        width: calc(100vw - 6rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    &__icon {
+        & + & {
+            margin-left: 1rem;
+        }
+    }
+
+    &__cards {
+
+    }
+
+    &__card {
+        text-transform: uppercase;
+        font-weight: 1.4rem;
+        text-align: center;
+        font-size: 1.4rem;
+        &-title {
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            font-family: Karla;
+            color: var(--darkGrayishViolet);
+        }
+
+        &-list {
+
+        }
+
+        &-item {
+            font-weight: 700;
+            & + & {
+                margin-top: 1rem;
+            }
+        }
+
+        & + & {
+            margin-top: 3rem;
+        }
+    }
+
+
+}
+
 .btn {
     margin-top: 2rem;
-    padding: 1rem 3rem; ;
+    padding: 1rem 3rem;
     color: white;
     background-color: transparent;
     border: 3px solid white;
