@@ -40,6 +40,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'DM Serif Display', serif;
+  font-weight: 400;
 }
 
 .container {
@@ -121,6 +122,108 @@ body.nav-btn .mobile-nav-list {
 
 .mobile-nav-item + .mobile-nav-item {
   margin-top: 3rem;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero__img img {
+  margin: 0 auto;
+}
+
+.hero__content {
+  background: url("../images/bg-pattern-intro-left-mobile.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-color: var(--veryDarkViolet);
+  padding: 8rem 3rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero__title {
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.hero__desc {
+  line-height: 1.6;
+  opacity: .8;
+}
+
+.hero .mobile-bg-pattern-right {
+  position: absolute;
+  right: 0;
+  top: 33rem;
+}
+
+.different {
+  margin-top: 16rem;
+  text-align: center;
+  position: relative;
+}
+
+.different::before {
+  content: '';
+  width: 16rem;
+  height: 2px;
+  background-color: var(--darkGrayishViolet);
+  top: -3rem;
+  left: 53%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.different__content {
+  padding: 0 3rem;
+}
+
+.different__title {
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.different__cards {
+  margin-top: 5rem;
+}
+
+.different__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.different__card + .different__card {
+  margin-top: 4rem;
+}
+
+.different__card-title {
+  margin-top: 3rem;
+}
+
+.different__card-desc {
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.btn {
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  color: white;
+  background-color: transparent;
+  border: 3px solid white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 li {
