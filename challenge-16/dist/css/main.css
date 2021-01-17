@@ -36,5 +36,163 @@ button, input, select, textarea {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
+  background-color: var(--veryLightGrayishBlue);
+  color: var(--darkGrayishBlue);
+}
+
+.container {
+  width: 100%;
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+.main {
+  margin-top: 5rem;
+}
+
+.main__content {
+  text-align: center;
+}
+
+.main__title {
+  font-size: 3rem;
+}
+
+.main__pricing-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grayishBlue);
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.main .toggle {
+  margin: 0 2rem;
+  width: 5rem;
+  height: 2.5rem;
+  background: var(--gradient);
+  border-radius: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.main .circle {
+  height: 2rem;
+  width: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  transition: left .2s;
+}
+
+.main__card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.main__card + .main__card {
+  margin-top: 2rem;
+}
+
+.main__plan {
+  padding-bottom: 1rem;
+}
+
+.main__card-prices {
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.main .dollar {
+  font-size: 3rem;
+  margin-right: 0.3rem;
+}
+
+.main .monthly-price {
+  position: absolute;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.main .annually-price {
+  opacity: 1;
+  transition: opacity .2s;
+}
+
+.main__storage {
+  border-top: 1px solid var(--grayishBlue);
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.main__users {
+  border-top: 1px solid var(--grayishBlue);
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.main__send {
+  border-top: 1px solid var(--grayishBlue);
+  border-bottom: 1px solid var(--grayishBlue);
+  margin: 0 auto;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.main__btn {
+  background: var(--gradient);
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 0;
+  border: 1px solid #a3a8f0;
+  text-transform: uppercase;
+  outline: 0;
+}
+
+.main__btn:hover {
+  background: white;
+  color: var(--darkGrayishBlue);
+  border-color: var(--darkGrayishBlue);
+}
+
+.main.monthly .monthly-price {
+  opacity: 1;
+}
+
+.main.monthly .annually-price {
+  opacity: 0;
+}
+
+.main.monthly .circle {
+  left: 27px;
+}
+
+.prof {
+  background: var(--gradient);
+  color: white;
+}
+
+.prof .main__btn {
+  background: none;
+  background-color: var(--veryLightGrayishBlue);
+  color: var(--darkGrayishBlue);
+}
+
+.prof .main__btn:hover {
+  background-color: transparent;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */

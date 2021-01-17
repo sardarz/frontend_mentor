@@ -1,7 +1,7 @@
-@import "reset";
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-// variables 
+// variables
 :root {
     --gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     --veryLightGrayishBlue: hsl(240, 78%, 98%);
@@ -10,7 +10,7 @@
     --darkGrayishBlue: hsl(232, 13%, 33%);
 }
 
-// mixins 
+// mixins
 @mixin mediaLarge {
     @media screen and (min-width: 1200px) {
         @content;
@@ -20,4 +20,163 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
+    background-color: var(--veryLightGrayishBlue);
+    color: var(--darkGrayishBlue);
+}
+
+.container {
+    width: 100%;
+    max-width: 33rem;
+    margin: 0 auto;
+}
+
+.main {
+    margin-top: 5rem;
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__pricing-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--grayishBlue);
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .toggle {
+        margin: 0 2rem;
+        width: 5rem;
+        height: 2.5rem;
+        background: var(--gradient);
+        border-radius: 2rem;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .circle {
+        height: 2rem;
+        width: 2rem;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        transition: left .2s;
+    }
+
+    &__card {
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 2rem;
+        & + & {
+            margin-top: 2rem;
+        }
+    }
+
+    &__plan {
+        padding-bottom: 1rem;
+    }
+
+    &__card-prices {
+        font-size: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .dollar {
+        font-size: 3rem;
+        margin-right: 0.3rem;
+    }
+
+    .monthly-price {
+        position: absolute;
+        opacity: 0;
+        transition: opacity .2s;
+    }
+
+    .annually-price {
+        opacity: 1;
+        transition: opacity .2s;
+
+    }
+
+    &__storage {
+        border-top: 1px solid var(--grayishBlue);
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+
+    &__users {
+        border-top: 1px solid var(--grayishBlue);
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+
+    &__send {
+        border-top: 1px solid var(--grayishBlue);
+        border-bottom: 1px solid var(--grayishBlue);
+        margin: 0 auto;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+    &__btn {
+        background: var(--gradient);
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        display: block;
+        margin: 0 auto;
+        text-decoration: none;
+        color: white;
+        padding: 1rem 0;
+        border: 1px solid hsl(236, 72%, 79%);
+        text-transform: uppercase;
+        outline: 0;
+        &:hover {
+            background: white;
+            color: var(--darkGrayishBlue);
+            border-color: var(--darkGrayishBlue);
+        }
+    }
+}
+
+.main.monthly {
+    .monthly-price {
+        opacity: 1;
+    }
+
+    .annually-price {
+        opacity: 0;
+    }
+
+    .circle {
+        left: 27px;
+    }
+
+}
+
+.prof {
+    background: var(--gradient);
+    color: white;
+}
+
+.prof .main__btn {
+    background: none;
+    background-color: var(--veryLightGrayishBlue);
+    color: var(--darkGrayishBlue);
+
+    &:hover {
+        background-color:  transparent;
+        color: white;
+    }
 }
