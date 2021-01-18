@@ -12,7 +12,7 @@
 
 // mixins
 @mixin media-large {
-    @media screen and (min-width: 1200) {
+    @media screen and (min-width: 600px) {
         @content;
     }
 }
@@ -52,8 +52,14 @@ h6 {
 
 .container {
     width: 100%;
-    max-width: 33rem;
+    max-width: 35rem;
     margin: 0 auto;
+    padding: 1rem;
+
+    @include media-large() {
+        max-width: 120rem;
+        padding: 0 2rem;
+    }
 }
 
 .header {
@@ -87,10 +93,36 @@ h6 {
         &-item {
             & + & {
                 margin-top: 2rem;
+
+                @include media-large() {
+                    margin-top: 0;
+                    margin-left: 3rem;
+                }
             }
             &:last-child {
                 border-top: 1px solid var(--grayishBlue);
                 padding-top: 2rem;
+
+                @include media-large() {
+                    border: none;
+                    padding-top: 0;
+                    margin-left: 9rem;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -4.5rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        width: 5px;
+                        height: 5px;
+
+                        background-color: var(--grayishBlue);
+                        border-radius: 50%;
+                    }
+                }
             }
             &:last-child a{
                 
@@ -101,11 +133,27 @@ h6 {
         &-link {
             
         }
+
+        @include media-large() {
+            position: static;
+
+            display: flex;
+            align-items: center;
+
+            background-color: initial;
+            box-shadow: none;
+
+            transform: translateY(0);
+        }
     }
 
     &__toggle-wrapper {
         position: relative;
         display: flex;
+
+        @include media-large() {
+            display: none;
+        }
     }
 
     &__close {
