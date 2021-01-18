@@ -1,0 +1,20 @@
+@import "reset";
+
+// variables 
+:root {
+    --prPink: hsl(322, 100%, 66%);
+    --paleCyan: hsl(193, 100%, 96%);
+    --darkCyan: hsl(192, 100%, 9%);
+    --grayishBlue: hsl(208, 11%, 55%);
+}
+
+// mixin 
+@mixin media-large {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+body {
+    font-size: 1.8rem;
+}
