@@ -12,7 +12,7 @@
 
 // mixins
 @mixin media-large {
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1000px) {
         @content;
     }
 }
@@ -24,6 +24,10 @@
 }
 
 body {
+    @include media-large() {
+        overflow: hidden;
+    }
+
     font-family: 'Barlow', sans-serif;
     font-size: 1.8rem;
 }
@@ -124,9 +128,37 @@ h6 {
                     }
                 }
             }
+
             &:last-child a{
                 
                 color: var(--grayishBlue);
+            }
+        }
+
+        &-link {
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0%;
+                right: 0;
+                bottom: 0;
+        
+                height: 1px;
+        
+                background-color: var(--veryDarkBlue);
+                
+                transition: opacity .5s;
+                opacity: 0;
+            }
+        
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+
+        &-item:last-child a {
+            &::after {
+                background-color: var(--grayishBlue);
             }
         }
 
@@ -181,17 +213,23 @@ body.nav-dropdown {
 
 .main {
     overflow: hidden;
+
     &__img {
         max-width: 50rem;
 
         @include media-large() {
             max-width: 100%;
+            position: absolute;
+            right: -25rem;
         }
     }
 
     &__content {
         margin-top: 8rem;
         margin-bottom: 5rem;
+        @include media-large() {
+            width: 50%;
+        }
     }
 
     &__monograph-wrapper {
@@ -216,6 +254,7 @@ body.nav-dropdown {
 
     &__monograph {
         margin-left: 1rem;
+        letter-spacing: 2px;
     }
 
     &__title {
@@ -223,10 +262,21 @@ body.nav-dropdown {
 
         text-transform: uppercase;
         line-height: 1;
+
+        @include media-large() {
+            font-size: 7rem;
+            margin: 4rem 0;
+        }
     }
 
     &__desc {
         color: var(--grayishBlue);
+
+        @include media-large() {
+            font-size: 2rem;
+            width: 60%;
+            margin-bottom: 6rem;
+        }
     }
 
     &__preview {
@@ -245,11 +295,11 @@ body.nav-dropdown {
         font-weight: 400;
 
         background-color: var(--prRed);
-        border-radius: 1rem;
+        border-radius: .5rem;
 
         transition: opacity .5s;
         &:hover {
-            opacity: .8;
+            opacity: .7;
         }
     }
 
@@ -276,4 +326,6 @@ a {
     font-weight: 700;
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: 1px;
+    position: relative;
+    
 }
