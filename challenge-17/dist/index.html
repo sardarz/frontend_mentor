@@ -1,50 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  
-  <title>Frontend Mentor | Project tracking intro component</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="css/main.css" />
 
-</head>
-<body>
-
-    <header class="header">
-        <div class="container">
-            <div class="header__content">
-                <img src="./images/logo.svg" alt="" class="header__logo">
-                <ul class="header__nav">
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">product</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">features</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">pricing</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">login</a></li>
-                </ul>
-                <div class="header__toggle-wrapper">
-                    <img src="./images/icon-close.svg" alt="" class="header__close">
-                    <img src="./images/icon-hamburger.svg" alt="" class="header__hamb">
+        <title>Frontend Mentor | Project tracking intro component</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <img src="./images/logo.svg" alt="" class="header__logo" />
+                    <ul class="header__nav">
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">product</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">features</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">pricing</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">login</a>
+                        </li>
+                    </ul>
+                    <div class="header__toggle-wrapper">
+                        <img
+                            src="./images/icon-close.svg"
+                            alt=""
+                            class="header__close"
+                        />
+                        <img
+                            src="./images/icon-hamburger.svg"
+                            alt=""
+                            class="header__hamb"
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-  Product
-  Features
-  Pricing
-  Login
+        </header>
 
-  New
-  Monograph Dashboard
+        <main class="main">
+            <img
+                class="main__img"
+                src="./images/illustration-devices.svg"
+                alt=""
+            />
 
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
+            <div class="container">
+                <div class="main__content">
+                    <div class="main__monograph-wrapper">
+                        <span class="black">New</span>
+                        <p class="main__monograph">Monograph Dashboard</p>
+                    </div>
+                    <h1 class="main__title">
+                        Powerful insights into your team
+                    </h1>
+                    <p class="main__desc">
+                        Project planning and time tracking for agile teams
+                    </p>
+                    <div class="main__preview">
+                        <a href="#" class="btn">schedule a demo</a>
+                        <p class="main__preview-desc">to see a preview</p>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-  Schedule a demo
-  to see a live preview
-  
-  <div class="bg"></div>
+        <div class="bg"></div>
 
-  <script src="main.js"></script>
-</body>
+        <script src="main.js"></script>
+    </body>
 </html>
