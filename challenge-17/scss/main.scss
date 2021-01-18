@@ -10,6 +10,19 @@
     --lightGrayishBlue: hsl(207, 33%, 95%);
 }
 
+// mixins
+@mixin media-large {
+    @media screen and (min-width: 1200) {
+        @content;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     font-family: 'Barlow', sans-serif;
     font-size: 1.8rem;
@@ -22,4 +35,115 @@ h4,
 h5,
 h6 {
     font-family: 'Barlow Condensed', sans-serif;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+
+    width: 50%;
+    height: 50%;
+    
+    border-bottom-left-radius: 8rem;
+    background-color: var(--lightGrayishBlue);
+}
+
+.container {
+    width: 100%;
+    max-width: 33rem;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 3rem 0;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__logo {
+        width: 2.5rem;
+    }
+
+    &__nav {
+        position: absolute;
+        left: 0%;
+        right: 0;
+        top: 8rem;
+
+        padding: 2rem;
+
+        text-align: center;
+
+        box-shadow: 1px 3px 10px rgba($color: #000000, $alpha: .3);
+        background-color: #fff;
+
+        transition: transform .5s;
+        transform: translateY(-200%);
+        &-item {
+            & + & {
+                margin-top: 2rem;
+            }
+            &:last-child {
+                border-top: 1px solid var(--grayishBlue);
+                padding-top: 2rem;
+            }
+            &:last-child a{
+                
+                color: var(--grayishBlue);
+            }
+        }
+
+        &-link {
+            
+        }
+    }
+
+    &__toggle-wrapper {
+        position: relative;
+        display: flex;
+    }
+
+    &__close {
+        opacity: 0;
+        transition: opacity .4s;
+    }
+
+    &__hamb {
+        position: absolute;
+        top: 4px;
+
+        transition: opacity .4s;
+    }
+}
+
+body.nav-dropdown {
+    .header__nav {
+        transform: translateY(0);
+    }
+
+    .header__close {
+        opacity: 1;
+    }
+
+    .header__hamb {
+        opacity: 0;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--veryDarkBlue);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px;
 }
