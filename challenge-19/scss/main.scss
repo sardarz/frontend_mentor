@@ -1,6 +1,7 @@
-@import "reset";
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
 
-// variables 
+// variables
 :root {
     --prPink: hsl(322, 100%, 66%);
     --paleCyan: hsl(193, 100%, 96%);
@@ -8,7 +9,7 @@
     --grayishBlue: hsl(208, 11%, 55%);
 }
 
-// mixin 
+// mixin
 @mixin media-large {
     @media screen and (min-width: 1200px) {
         @content;
@@ -16,5 +17,106 @@
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.8rem;
+    color: var(--darkCyan);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    background: url('../images/bg-hero-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-color: var(--paleCyan);
+
+    &__content {
+        padding: 3rem 0 ;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 1.8rem;
+    }
+
+    &__btn {
+        padding: 0.5rem 3rem;
+
+        border: 0;
+        border-radius: 3rem;
+        outline: 0;
+        background-color: #fff;
+    }
+
+    &__grid {
+    }
+
+    &__left {
+        text-align: center;
+    }
+
+    &__title {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        padding: 0 2rem;
+        font-size: 2.3rem;
+    }
+
+    &__desc {
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+    &__right {
+    }
+}
+
+.btn {
+    width: 80%;
+    margin-bottom: 5rem;
+    padding: 1rem 3rem;
+
+    color: white;
+    font-size: 1.3rem;
+
+    border: 0;
+    border-radius: 3rem;
+    background-color: var(--prPink);
+    outline: 0;
+}
+
+button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: Poppins;
+
+    transition: opacity .5s, transform .1s;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+button:active {
+    transform: translateY(2px);
 }
