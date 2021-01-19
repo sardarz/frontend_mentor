@@ -1,0 +1,30 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+// variables
+:root {
+    --introAndMailSignUpBG: hsl(217, 28%, 15%);
+    --mainBG: hsl(218, 28%, 13%);
+    --footerBG: hsl(216, 53%, 9%);
+    --testimBG: hsl(219, 30%, 18%);
+
+    --cyanCallToAction: hsl(176, 68%, 64%);
+    --blueCallToAction: hsl(198, 60%, 50%);
+    --lightRed: hsl(0, 100%, 63%);
+}
+
+// mixins
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+}
