@@ -126,4 +126,31 @@ button:hover {
 button:active {
   transform: translateY(2px);
 }
+
+.main {
+  margin-top: 7rem;
+  margin-bottom: 20rem;
+}
+
+.main__card {
+  padding: 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main__card + .main__card {
+  margin-top: 3rem;
+}
+
+.main__card-title {
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.main__card-desc {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--grayishBlue);
+}
 /*# sourceMappingURL=main.css.map */
