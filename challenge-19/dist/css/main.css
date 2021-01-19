@@ -270,6 +270,13 @@ button:active {
   padding: 4rem 2rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .build {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 .build__content {
   text-align: center;
 }
@@ -285,6 +292,7 @@ button:active {
 }
 
 .footer {
+  position: relative;
   margin-top: 18rem;
   padding-bottom: 5rem;
   color: white;
@@ -297,6 +305,14 @@ button:active {
 
 .footer__grid {
   margin-top: 3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 45rem 1fr 1fr 1fr;
+    gap: 12rem;
+  }
 }
 
 .footer__grid-item-wrapper {
@@ -316,6 +332,12 @@ button:active {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__icons {
+    margin-top: 0;
+  }
 }
 
 .footer__icon {
@@ -343,14 +365,34 @@ button:active {
   margin-top: 4rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .mt {
+    margin-top: 0;
+  }
+}
+
 .mts {
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .mts:first-child {
+    margin-top: 0;
+  }
 }
 
 .copy {
   margin-top: 3rem;
   font-size: 1.2rem;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .copy {
+    position: absolute;
+    right: 15rem;
+    bottom: 5rem;
+  }
 }
 
 li {
