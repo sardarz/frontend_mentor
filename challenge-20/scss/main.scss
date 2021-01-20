@@ -137,6 +137,34 @@ body {
     }
 }
 
+.cards {
+    margin-top: 10rem;
+
+    &__content {
+        text-align: center;
+        display: grid;
+        gap: 7rem;
+    }
+
+    &__card {
+
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+
+    }
+}
+
 li {
     list-style: none;
 }

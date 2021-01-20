@@ -170,6 +170,26 @@ body {
   margin: 0 auto;
 }
 
+.cards {
+  margin-top: 10rem;
+}
+
+.cards__content {
+  text-align: center;
+  display: grid;
+  gap: 7rem;
+}
+
+.cards__img {
+  margin: 0 auto;
+}
+
+.cards__title {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
 li {
   list-style: none;
 }
