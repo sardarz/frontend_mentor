@@ -212,11 +212,11 @@ body {
         display: inline-flex;
         align-items: center;
         margin-top: 2rem;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
         color: var(--cyanCallToAction);
         font-family: 'Raleway', sans-serif;
         border-bottom: 1px solid var(--cyanCallToAction);
-        transition: all .5s;
+        transition: all 0.5s;
         &:hover {
             color: white;
             border-color: white;
@@ -227,13 +227,68 @@ body {
         display: block;
         width: 1.5rem;
         height: 1.5rem;
-        margin-left: .7rem;
-        background: url("../images/icon-arrow.svg");
+        margin-left: 0.7rem;
+        background: url('../images/icon-arrow.svg');
         background-position: center;
         border-radius: 50%;
     }
+}
 
+.reviews {
+    &__grid {
+        position: relative;
+        display: grid;
+        gap: 3rem;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -2rem;
+            left: 1rem;
+            z-index: -10;
+            width: 3rem;
+            height: 3rem;
+            background-image: url('../images/bg-quotes.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
 
+    &__card {
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        background-color: var(--testimBG);
+    }
+
+    &__desc {
+        line-height: 1.7;
+        font-size: 1.3rem;
+    }
+
+    &__profile-wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    &__profile-img {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+    }
+
+    &__profile-info {
+        margin-left: 1rem;
+    }
+
+    &__profile-name {
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    &__profile-job {
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
 }
 
 li {
