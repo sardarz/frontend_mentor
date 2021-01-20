@@ -37,6 +37,9 @@ body {
 }
 
 .container {
+    @include media-large() {
+        max-width: 120rem;
+    }
     max-width: 35rem;
     width: 100%;
     margin: 0 auto;
@@ -44,11 +47,23 @@ body {
 }
 
 .header {
+    @include media-large() {
+        background: url('../images/bg-curvy-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+        background-color: var(--introAndMailSignUpBG);
+    }
     position: relative;
-    background: url("../images/bg-curvy-mobile.svg");
+    padding-top: 3rem;
+    background: url('../images/bg-curvy-mobile.svg');
     background-repeat: no-repeat;
     background-position: center bottom 20rem;
+    background-color: var(--introAndMailSignUpBG);
     &::before {
+        @include media-large() {
+            display: none;
+        }
         content: '';
         position: absolute;
         right: 0;
@@ -58,8 +73,6 @@ body {
         background-color: var(--mainBG);
     }
 
-    background-color: var(--introAndMailSignUpBG);
-    padding-top: 3rem;
     &__content {
         position: relative;
         z-index: 10;
@@ -80,12 +93,15 @@ body {
     }
 
     &__item {
-        opacity: .8;
-        transition: opacity .3s;
+        opacity: 0.8;
+        transition: opacity 0.3s;
         &:hover {
             opacity: 1;
         }
         & + & {
+            @include media-large() {
+                margin-left: 6rem;
+            }
             margin-left: 2rem;
         }
     }
@@ -95,17 +111,24 @@ body {
     }
 
     &__img {
-
+        @include media-large() {
+            max-width: 50rem;
+        }
+        margin: 0 auto;
     }
 
     &__title {
+        font-size: 2.6rem;
+        max-width: 50rem;
+        margin: 0 auto;
         margin-top: 5rem;
         margin-bottom: 3rem;
-        font-size: 2.6rem;
     }
 
     &__desc {
+        margin: 0 auto;
         margin-bottom: 3rem;
+        max-width: 45rem;
     }
 
     &__btn {
@@ -130,9 +153,9 @@ a {
     background-color: var(--cyanCallToAction);
     border-radius: 3rem;
 
-    transition: opacity .3s;
+    transition: opacity 0.3s;
 }
 
 .btn:hover {
-    opacity: .8;
+    opacity: 0.8;
 }
