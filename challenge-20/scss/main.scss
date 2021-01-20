@@ -138,12 +138,14 @@ body {
 }
 
 .cards {
-    margin-top: 10rem;
+    margin: 10rem 0;
 
     &__content {
-        text-align: center;
         display: grid;
         gap: 7rem;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
         @include media-large() {
             grid-template-columns: repeat(2, 1fr);
             place-items: center;
@@ -167,8 +169,71 @@ body {
     }
 
     &__desc {
-
     }
+}
+
+.productive {
+    margin-bottom: 10rem;
+    &__content {
+        @include media-large() {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5rem;
+        }
+    }
+
+    &__left {
+    }
+
+    &__img {
+    }
+
+    &__right {
+        @include media-large() {
+            margin-top: 0;
+            align-self: center;
+        }
+        margin-top: 5rem;
+    }
+
+    &__title {
+        @include media-large() {
+            font-size: 4rem;
+            width: 70%;
+        }
+        font-size: 1.8rem;
+    }
+
+    &__desc {
+        margin-top: 1rem;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 2rem;
+        padding-bottom: .5rem;
+        color: var(--cyanCallToAction);
+        font-family: 'Raleway', sans-serif;
+        border-bottom: 1px solid var(--cyanCallToAction);
+        transition: all .5s;
+        &:hover {
+            color: white;
+            border-color: white;
+        }
+    }
+
+    .arrow {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: .7rem;
+        background: url("../images/icon-arrow.svg");
+        background-position: center;
+        border-radius: 50%;
+    }
+
+
 }
 
 li {
