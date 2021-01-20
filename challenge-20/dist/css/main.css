@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+:root {
+  --introAndMailSignUpBG: hsl(217, 28%, 15%);
+  --mainBG: hsl(218, 28%, 13%);
+  --footerBG: hsl(216, 53%, 9%);
+  --testimBG: hsl(219, 30%, 18%);
+  --cyanCallToAction: hsl(176, 68%, 64%);
+  --blueCallToAction: hsl(198, 60%, 50%);
+  --lightRed: hsl(0, 100%, 63%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  color: white;
+  font-size: 1.4rem;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--mainBG);
+}
+
+.container {
+  max-width: 35rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  position: relative;
+  background: url("../images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom 20rem;
+  background-color: var(--introAndMailSignUpBG);
+  padding-top: 3rem;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0%;
+  bottom: 0;
+  height: 20rem;
+  background-color: var(--mainBG);
+}
+
+.header__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  max-height: 3rem;
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__item {
+  opacity: .8;
+  transition: opacity .3s;
+}
+
+.header__item:hover {
+  opacity: 1;
+}
+
+.header__item + .header__item {
+  margin-left: 2rem;
+}
+
+.header__main {
+  margin-top: 5rem;
+}
+
+.header__title {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 2.6rem;
+}
+
+.header__desc {
+  margin-bottom: 3rem;
+}
+
+.header__btn {
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: block;
+  padding: 2rem 3rem;
+  font-weight: 700;
+  background-color: var(--cyanCallToAction);
+  border-radius: 3rem;
+  transition: opacity .3s;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+/*# sourceMappingURL=main.css.map */
