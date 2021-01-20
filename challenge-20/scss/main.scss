@@ -144,10 +144,16 @@ body {
         text-align: center;
         display: grid;
         gap: 7rem;
+        @include media-large() {
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+            gap: 0;
+            row-gap: 7rem;
+        }
     }
 
     &__card {
-
+        max-width: 35rem;
     }
 
     &__img {
