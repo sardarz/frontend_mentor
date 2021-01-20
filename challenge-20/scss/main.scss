@@ -239,7 +239,7 @@ body {
 }
 
 .reviews {
-    margin-bottom: 20rem;
+    margin-bottom: 30rem;
     &__grid {
         @include media-large() {
             grid-template-columns: repeat(3, 1fr);
@@ -304,11 +304,20 @@ body {
 }
 
 .early {
-    max-width: 35rem;
+    @include media-large() {
+        width: 80rem;
+        top: -14rem;
+    }
+    position: absolute;
+    top: -20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35rem;
     margin: 0 auto;
     padding: 3rem;
     text-align: center;
     background-color: var(--introAndMailSignUpBG);
+    border-radius: 1rem;
     &__title {
         margin-bottom: 2rem;
         margin-top: 1rem;
@@ -319,22 +328,37 @@ body {
     }
 
     &__form {
-
+        @include media-large() {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__email {
+        @include media-large() {
+            width: 65%;
+        }
         padding: 2rem 3rem;
         width: 100%;
         border-radius: 3rem;
     }
 
     &__btn {
+        @include media-large() {
+            margin-top: 0;
+            width: 30%;
+        }
         margin-top: 2rem;
     }  
 }
 
 .footer {
-    padding-top: 15rem;
+    @include media-large() {
+        padding-top: 15rem;
+    }
+    position: relative;
+    padding-top: 25rem;
     padding-bottom: 5rem;
     background-color: var(--footerBG);
     &__content {
@@ -357,7 +381,7 @@ body {
     }
 
     &__logo {
-
+        margin-bottom: 5rem;
     }
 
     &__img {

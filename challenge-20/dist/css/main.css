@@ -277,7 +277,7 @@ body {
 }
 
 .reviews {
-  margin-bottom: 20rem;
+  margin-bottom: 30rem;
 }
 
 .reviews__grid {
@@ -350,11 +350,23 @@ body {
 }
 
 .early {
-  max-width: 35rem;
+  position: absolute;
+  top: -20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35rem;
   margin: 0 auto;
   padding: 3rem;
   text-align: center;
   background-color: var(--introAndMailSignUpBG);
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .early {
+    width: 80rem;
+    top: -14rem;
+  }
 }
 
 .early__title {
@@ -366,20 +378,48 @@ body {
   margin-bottom: 3rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .early__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .early__email {
   padding: 2rem 3rem;
   width: 100%;
   border-radius: 3rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .early__email {
+    width: 65%;
+  }
+}
+
 .early__btn {
   margin-top: 2rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .early__btn {
+    margin-top: 0;
+    width: 30%;
+  }
+}
+
 .footer {
-  padding-top: 15rem;
+  position: relative;
+  padding-top: 25rem;
   padding-bottom: 5rem;
   background-color: var(--footerBG);
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 15rem;
+  }
 }
 
 .footer__content {
@@ -397,6 +437,10 @@ body {
     align-items: start;
     gap: 3rem;
   }
+}
+
+.footer__logo {
+  margin-bottom: 5rem;
 }
 
 .footer__img {
