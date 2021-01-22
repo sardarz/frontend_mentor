@@ -204,6 +204,13 @@ body {
   background-color: var(--lightGrayishBlue);
   background: url("../images/bg-curve-mobile.svg");
   background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    background-image: url("../images/bg-curve-desktop.svg");
+  }
 }
 
 .main::before {
@@ -217,9 +224,35 @@ body {
   z-index: -5;
 }
 
+@media screen and (min-width: 1200px) {
+  .main::before {
+    top: 7.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__img {
+    grid-column: 2/3;
+  }
+}
+
 .main__grid-item {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__grid-item {
+    grid-row: 1;
+  }
 }
 
 .main__title {
@@ -229,9 +262,22 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .main__title {
+    text-align: left;
+    font-size: 3rem;
+  }
+}
+
 .main__desc {
   color: var(--prDesaturatedBlue);
   font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__desc {
+    width: 80%;
+  }
 }
 
 .main__desc + .main__desc {
@@ -248,6 +294,12 @@ body {
   font-size: 1.4rem;
   color: var(--accentCyan);
   border-bottom: 1px solid var(--accentCyan);
+}
+
+@media screen and (min-width: 1200px) {
+  .main__fylo {
+    align-self: start;
+  }
 }
 
 .main .arrow {
@@ -270,6 +322,13 @@ body {
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 1200px) {
+  .main__card {
+    margin-left: 0;
+    width: 50%;
+  }
 }
 
 .main__quotes {
