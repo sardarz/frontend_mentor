@@ -359,3 +359,68 @@ body {
         border: none;
     }
 }
+
+.footer {
+    padding: 5rem 0;
+    color: white;
+    background-color: var(--prVeryDarkBlue);
+    &__content {
+
+    }
+
+    &__logo {
+
+    }
+
+    &__flex-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+        margin-top: 3rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 1rem;
+        }
+    }
+
+    &__contact-icon {
+        margin-right: 1rem;
+    }
+
+    &__contact {
+
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        margin-top: 4rem;
+        & > li {
+            margin-left: 1rem;
+        }
+    }
+
+    &__icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    a {
+        color: white;
+    }
+}
+
+.contact-flex {
+    display: flex;
+    align-items: center;
+}
