@@ -42,6 +42,9 @@ body {
 }
 
 .container {
+    @include media-large() {
+        max-width: 120rem;
+    }
     width: 100%;
     max-width: 35rem;
     margin: 0 auto;
@@ -49,6 +52,9 @@ body {
 }
 
 .header {
+    @include media-large() {
+        min-height: 100vh;
+    }
     padding-top: 2rem;
     &__content {
     }
@@ -68,6 +74,9 @@ body {
     }
 
     &__item {
+        @include media-large() {
+            font-size: 1.6rem;
+        }
         & + & {
             margin-left: 2rem;
         }
@@ -76,17 +85,33 @@ body {
     }
 
     &__grid {
+        @include media-large() {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
         margin-top: 7rem;
     }
 
     &__img {
+        @include media-large() {
+            grid-column: 2/3;
+        }
     }
 
     &__grid-item-wrapper {
+        @include media-large() {
+            grid-row: 1;
+            align-self: center;
+            text-align: left;
+            padding-right: 5rem;
+        }
         text-align: center;
     }
 
     &__title {
+        @include media-large() {
+            font-size: 3.5rem;
+        }
         margin: 3rem 0;
         font-size: 2.5rem;
     }
@@ -95,20 +120,34 @@ body {
     }
 
     &__form {
+        @include media-large() {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+        }
         margin-top: 3rem;
         padding: 0 2rem;
     }
 
     &__email {
+        @include media-large() {
+            width: 60%;
+        }
         display: block;
         padding: 1rem 2rem;
         width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     &__btn {
+        @include media-large() {
+            margin-top: 0;
+            width: 38%;
+        }
         width: 100%;
         margin-top: 1rem;
+        text-align: center;
     }
 }
 
