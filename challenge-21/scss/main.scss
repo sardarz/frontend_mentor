@@ -304,3 +304,40 @@ body {
         font-size: 1rem;
     }
 }
+
+.early {
+    padding: 4rem 2rem;
+    color: white;
+    text-align: center;
+    background-color: var(--prDesaturatedBlue);
+    &__content {
+
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+    }
+
+    &__form {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    &__btn {
+        border-radius: 5px;
+    }
+
+    &__email {
+        padding: .8rem 2rem;
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+    }
+}

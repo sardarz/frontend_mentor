@@ -364,4 +364,38 @@ body {
 .main__job {
   font-size: 1rem;
 }
+
+.early {
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+  background-color: var(--prDesaturatedBlue);
+}
+
+.early__title {
+  margin-bottom: 2rem;
+}
+
+.early__desc {
+  font-size: 1.6rem;
+}
+
+.early__form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.early__btn {
+  border-radius: 5px;
+}
+
+.early__email {
+  padding: .8rem 2rem;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
 /*# sourceMappingURL=main.css.map */
