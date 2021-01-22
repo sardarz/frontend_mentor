@@ -306,12 +306,25 @@ body {
 }
 
 .early {
+    @include media-large() {
+        text-align: left;
+    }
     padding: 4rem 2rem;
     color: white;
     text-align: center;
     background-color: var(--prDesaturatedBlue);
     &__content {
+        @include media-large() {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+    }
 
+    &__wrapper {
+        @include media-large() {
+            padding-right: 6rem;
+        }
     }
 
     &__title {
@@ -329,7 +342,12 @@ body {
     }
 
     &__btn {
+        @include media-large() {
+            width: 50%;
+            margin-top: 1rem;
+        }
         border-radius: 5px;
+        text-align: center;
     }
 
     &__email {

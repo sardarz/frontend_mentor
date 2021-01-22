@@ -372,6 +372,26 @@ body {
   background-color: var(--prDesaturatedBlue);
 }
 
+@media screen and (min-width: 1200px) {
+  .early {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .early__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .early__wrapper {
+    padding-right: 6rem;
+  }
+}
+
 .early__title {
   margin-bottom: 2rem;
 }
@@ -388,6 +408,14 @@ body {
 
 .early__btn {
   border-radius: 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .early__btn {
+    width: 50%;
+    margin-top: 1rem;
+  }
 }
 
 .early__email {
