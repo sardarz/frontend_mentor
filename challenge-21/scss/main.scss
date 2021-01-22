@@ -373,11 +373,20 @@ body {
     }
 
     &__flex-wrapper {
+        @include media-large() {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 1rem;
+            width: 80%;
+        }
         display: flex;
         flex-direction: column;
     }
 
     &__list {
+        @include media-large() {
+            margin-top: 0;
+        }
         margin-top: 3rem;
     }
 
@@ -396,6 +405,10 @@ body {
     }
 
     &__icons {
+        @include media-large() {
+            align-self: start;
+            margin-top: 0;
+        }
         display: flex;
         align-items: center;
         align-self: center;
