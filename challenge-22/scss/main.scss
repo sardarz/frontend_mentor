@@ -71,6 +71,82 @@ a {
     background-color: var(--prPink);
     color: white;
     display: inline-block;
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
     border-radius: 3rem;
+}
+
+.main {
+    margin-top: 12rem;
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        @include media-large() {
+            font-size: 3rem;
+        }
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+
+    &__desc {
+        @include media-large() {
+            padding: 0 35rem;
+        }
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        font-size: 1.5rem;
+    }
+
+    &__btn {
+        margin-bottom: 10rem;
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    &__flex-wrapper {
+        @include media-large() {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    &__flex-item {
+        @include media-large() {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        width: 50%;
+
+        & + & {
+            @include media-large() {
+                margin-top: 0;
+            }
+            margin-top: 5rem;
+        }
+    }
+
+    &__flex-logo {
+        max-height: 3rem;
+    }
+
+    &__flex-title {
+        text-align: left;
+        font-size: 5rem;
+    }
+
+    &__flex-desc {
+        color: rgba($color: #000000, $alpha: .5);
+    }
 }
