@@ -10,6 +10,13 @@
     --veryPaleBlue: hsl(207, 100%, 98%);
 }
 
+// mixins 
+@mixin media-large {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
@@ -20,4 +27,50 @@ h2,
 h3,
 h4 {
     font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    @include media-large() {
+        max-width: 120rem;
+    }
+    max-width: 35rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    margin-top: 3rem;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        @include media-large() {
+            max-height: 3rem;
+        }
+        max-height: 2rem;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: .2rem 2rem;
+        color: var(--prRed);
+        border: 1px solid var(--prRed);
+        border-radius: 3rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: var(--prPink);
+    color: white;
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
 }

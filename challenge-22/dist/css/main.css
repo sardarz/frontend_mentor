@@ -44,4 +44,57 @@ h3,
 h4 {
   font-family: 'Poppins', sans-serif;
 }
+
+.container {
+  max-width: 35rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 120rem;
+  }
+}
+
+.header {
+  margin-top: 3rem;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  max-height: 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    max-height: 3rem;
+  }
+}
+
+.header__btn {
+  display: inline-block;
+  padding: .2rem 2rem;
+  color: var(--prRed);
+  border: 1px solid var(--prRed);
+  border-radius: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: var(--prPink);
+  color: white;
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+}
 /*# sourceMappingURL=main.css.map */
