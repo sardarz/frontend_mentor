@@ -181,6 +181,12 @@ a {
   max-height: 3rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .main__flex-logo {
+    transform: translateX(-5rem);
+  }
+}
+
 .main__flex-title {
   text-align: left;
   font-size: 5rem;

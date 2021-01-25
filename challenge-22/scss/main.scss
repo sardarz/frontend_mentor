@@ -138,6 +138,9 @@ a {
     }
 
     &__flex-logo {
+        @include media-large() {
+            transform: translateX(-5rem);
+        }
         max-height: 3rem;
     }
 
