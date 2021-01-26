@@ -308,3 +308,15 @@ a {
         background-color: var(--veryPaleBlue);
     }
 }
+
+.comm {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    &__content {
+        text-align: center;
+    }
+
+    &__btn {
+        margin-top: 3rem;
+    }
+}

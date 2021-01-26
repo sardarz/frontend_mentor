@@ -369,4 +369,17 @@ a {
     display: none;
   }
 }
+
+.comm {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.comm__content {
+  text-align: center;
+}
+
+.comm__btn {
+  margin-top: 3rem;
+}
 /*# sourceMappingURL=main.css.map */
