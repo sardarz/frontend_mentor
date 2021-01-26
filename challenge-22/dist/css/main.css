@@ -375,6 +375,12 @@ a {
   margin-bottom: 10rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .comm {
+    margin: 12rem 0;
+  }
+}
+
 .comm__content {
   text-align: center;
 }
@@ -391,6 +397,14 @@ a {
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer {
+    background-image: url("../images/bg-footer-top-desktop.svg");
+    background-size: contain;
+    padding-top: 20rem;
+  }
+}
+
 .footer::before {
   content: '';
   position: absolute;
@@ -402,6 +416,12 @@ a {
   z-index: -10;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer::before {
+    top: 16rem;
+  }
+}
+
 .footer p {
   font-size: 1.5rem;
   line-height: 1.6;
@@ -409,6 +429,14 @@ a {
 
 .footer__content {
   color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 .footer__newsletter {
@@ -425,10 +453,22 @@ a {
   flex-direction: column;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__form {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__newsletter p {
+    width: 58%;
+  }
+}
+
 .footer__email {
   width: 100%;
   height: 4rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   outline: 0;
   padding: 0 2rem;
 }
@@ -440,7 +480,20 @@ a {
   align-items: center;
   margin-top: 1rem;
   height: 4rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__btn {
+    margin-top: 0;
+    margin-left: 5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__info {
+    width: 60%;
+  }
 }
 
 .footer__logo {
@@ -467,6 +520,11 @@ a {
 .footer__icon {
   font-size: 2.5rem;
   color: white;
+  transition: color 0.5s;
+}
+
+.footer__icon:hover {
+  color: aqua;
 }
 
 li {
