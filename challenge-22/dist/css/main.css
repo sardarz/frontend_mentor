@@ -80,7 +80,7 @@ h4 {
 
 .header__btn {
   display: inline-block;
-  padding: .2rem 2rem;
+  padding: 0.2rem 2rem;
   color: var(--prRed);
   border: 1px solid var(--prRed);
   border-radius: 3rem;
@@ -196,44 +196,72 @@ a {
   color: rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (min-width: 1200px) and (min-width: 1200px) {
+  .cards__card-wrapper:first-child {
+    background-image: url("../images/bg-section-top-desktop-1.svg"), url("../images/bg-section-bottom-desktop-1.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center bottom;
+    background-size: contain;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards__card-wrapper:first-child::before {
+    content: '';
+    position: absolute;
+    top: 17rem;
+    bottom: 14rem;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    background-color: var(--veryPaleBlue);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-width: 1200px) {
+  .cards__card-wrapper:nth-child(3) {
+    background-image: url("../images/bg-section-top-desktop-2.svg"), url("../images/bg-section-bottom-desktop-2.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center bottom;
+    background-size: contain;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards__card-wrapper:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 16rem;
+    bottom: 14rem;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    background-color: var(--veryPaleBlue);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards__card-wrapper:nth-child(odd) img {
+    grid-column: 2;
+  }
+}
+
 .cards__card {
   padding: 15rem 3rem;
 }
 
-.cards__card:first-child {
-  background-image: url("../images/bg-section-top-mobile-1.svg"), url("../images/bg-section-bottom-mobile-1.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center top, center bottom;
-  position: relative;
-}
-
-.cards__card:first-child::before {
-  content: '';
-  position: absolute;
-  top: 10.9rem;
-  bottom: 5rem;
-  left: 0;
-  right: 0;
-  z-index: -10;
-  background-color: var(--veryPaleBlue);
-}
-
-.cards__card:nth-child(3) {
-  background-image: url("../images/bg-section-top-mobile-2.svg"), url("../images/bg-section-bottom-mobile-2.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center top, center bottom;
-  position: relative;
-}
-
-.cards__card:nth-child(3)::before {
-  content: '';
-  position: absolute;
-  top: 10rem;
-  bottom: 10rem;
-  left: 0;
-  right: 0;
-  z-index: -10;
-  background-color: var(--veryPaleBlue);
+@media screen and (min-width: 1200px) {
+  .cards__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-auto-flow: dense;
+    gap: 10rem;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
 }
 
 .cards__card + .cards__card {
@@ -245,8 +273,20 @@ a {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .cards__img {
+    width: 100%;
+  }
+}
+
 .cards__text {
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .cards__text {
+    text-align: left;
+  }
 }
 
 .cards__title {
@@ -254,7 +294,79 @@ a {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .cards__title {
+    font-size: 3rem;
+  }
+}
+
 .cards__desc {
   font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .cards__desc {
+    width: 90%;
+  }
+}
+
+.top {
+  background-image: url("../images/bg-section-top-mobile-1.svg"), url("../images/bg-section-bottom-mobile-1.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center bottom;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .top {
+    background: none;
+  }
+}
+
+.top::before {
+  content: '';
+  position: absolute;
+  top: 10.9rem;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  background-color: var(--veryPaleBlue);
+}
+
+@media screen and (min-width: 1200px) {
+  .top::before {
+    display: none;
+  }
+}
+
+.bot {
+  background-image: url("../images/bg-section-top-mobile-2.svg"), url("../images/bg-section-bottom-mobile-2.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center bottom;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .bot {
+    background: none;
+  }
+}
+
+.bot::before {
+  content: '';
+  position: absolute;
+  top: 10rem;
+  bottom: 10rem;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  background-color: var(--veryPaleBlue);
+}
+
+@media screen and (min-width: 1200px) {
+  .bot::before {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
